@@ -1,0 +1,20 @@
+# Other files
+*.dat
+*.xlsx
+*.csv
+*.json
+*.bmp
+*.png
+
+# Compiled Object files
+*.spec
+*.pyc
+
+# pyinstaller -F  & pycharm
+__pycache__
+build
+dist
+.idea
+
+
+
