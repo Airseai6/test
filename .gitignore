@@ -1,16 +1,16 @@
-# Other files
+# Other object files
 *.dat
 *.xlsx
 *.csv
 *.json
 *.bmp
 *.png
-
-# Compiled Object files
+*.jpg
 *.spec
 *.pyc
+*.svg
 
-# pyinstaller -F  & pycharm
+# pyinstaller-F & pycharm
 __pycache__
 build
 dist

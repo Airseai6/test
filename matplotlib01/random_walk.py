@@ -1,13 +1,12 @@
 #! python
 # -*- coding:utf-8 -*-
 
-import matplotlib.pyplot as mpl
+import matplotlib.pyplot as plt
 from random import choice
 
 
 class RandomWalk:
     """生成一个随机漫步的类"""
-
     def __init__(self, num_points=5000):
         """初始化随机漫步的属性"""
         self.num_points = num_points
@@ -37,8 +36,20 @@ class RandomWalk:
             self.y_value.append(next_y)
 
 
-if __name__ == '__main__':
-    rw = RandomWalk()
+def rw_visual():
+    # while True:
+    rw = RandomWalk(10000)
     rw.fill_walk()
-    mpl.scatter(rw.x_value, rw.y_value, s=15)
-    mpl.show()
+    point_numbers = list(range(rw.num_points))
+    # 用颜色指定开始走的与后面走的
+    plt.scatter(0, 0, c='red', edgecolors='none', s=100)
+    plt.scatter(rw.x_value, rw.y_value, c=point_numbers, cmap=plt.cm.Blues, s=15)
+    # plt.axes().get_xaxis().set_visible(False)
+    plt.show()
+    #     keeping = input('Make other walk (y/n)? ->')
+    #     if keeping == 'n':
+    #         break
+
+
+if __name__ == '__main__':
+    rw_visual()
