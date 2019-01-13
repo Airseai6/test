@@ -1,10 +1,6 @@
 # -*- coding:utf-8 -*-
-
-
-def aa(a, b, c=23):
-    print(a,b,c)
-
-
-if __name__ == '__main__':
-    aa(1,2,3)
-    aa(1,3)
+# from decimal import *
+# g = Decimal('15.6')
+# print(g)
+g = lambda x, y=3, z=5:x*y*z
+print(g(1))

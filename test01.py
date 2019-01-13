@@ -1,11 +1,16 @@
 #! python3
 # -*- coding:utf-8 -*-
 
-dict = {'Google': 'www.google.com', 'Runoob': 'www.runoob.com', 'taobao': 'www.taobao.com'}
+from decimal import *
 
-print("字典值 : %s" % dict.items())
-print(type(dict.items()))
+def ask():
+    input_str = input("Please enter the price of your item");
+    try:
+        number = Decimal( input_str )
+        return number
+    except( InvalidOperation, ValueError, TypeError ) as e:
+        return ask()
 
-# 遍历字典列表
-for key, values in dict.items():
-    print(key, values)
+
+number = ask()
+print(number)
