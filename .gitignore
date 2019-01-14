@@ -1,8 +1,8 @@
 # Other object files
 *.dat
 *.xlsx
-*.csv
-*.json
+# *.csv
+# *.json
 *.bmp
 *.png
 *.jpg
