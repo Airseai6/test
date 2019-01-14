@@ -1,6 +1,7 @@
 # Other object files
 *.dat
 *.xlsx
+*.docx
 # *.csv
 # *.json
 *.bmp
