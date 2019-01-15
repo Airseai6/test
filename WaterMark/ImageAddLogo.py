@@ -24,17 +24,17 @@ def add_logo(logo_filename, dirname):
 		# Check if logo needs to be resized.
 		if logoWidth < width:
 			if (width / logoWidth) > (height / logoHeight):
-				logoHeight = int((height / width )*logoWidth)
+				logoHeight = int((logoHeight / logoWidth) * width)
 				logoWidth = width
 			else:
-				logoWidth = int((height / width) * logoHeight)
+				logoWidth = int((logoWidth / logoHeight) * height)
 				logoHeight = height
 			logoIm = logoIm.resize((logoWidth, logoHeight))
 		# Add the logo
 		print('Adding logo to %s'%(filename))
 		r, g, b, a = logoIm.split()
 		logoIm.convert('RGBA')
-		im.paste(logoIm, (0, height-logoHeight), mask=a)
+		im.paste(logoIm, (0, 0), mask=a)
 		im.save(os.path.join('withlogo', filename))
 
 
