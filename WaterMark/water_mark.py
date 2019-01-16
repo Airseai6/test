@@ -66,6 +66,7 @@ def dir2word(pathname, filename):
     # 第一个参数是归档文件名称，第二个参数是指定的格式，不仅是支持zip，第三个参数是要压缩文件/文件夹的路径
     shutil.make_archive(pathname, 'zip', pathname)
     # os.remove(pathname)
+    shutil.rmtree(pathname)
 
     with open(new_file, 'rb')as f:
         data = f.read()
