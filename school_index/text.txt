@@ -1,0 +1,27 @@
+### 默认 CloudLearn 网站【福州大学电气工程与自动化学院】
+
+
+http://119.23.40.38:9000/
+
+
+    9000 Nginx HTTP
+    5000 Python
+    3310 MySQL
+    5001 Redis
+    8430 WebSocket
+    html HTML
+    cloudlearn DB
+
+### CloudLearn 长沙理工大学水利工程学院
+
+
+http://119.23.40.38:9100/
+
+
+    9100 Nginx HTTP
+    5100 Python
+    3310 MySQL
+    5001 Redis
+    8530 WebSocket
+    html_cslgdx HTML
+    cloudlearn_cslgdx DB

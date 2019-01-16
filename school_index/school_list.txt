@@ -1,0 +1,253 @@
+CloudLearn 网站【测试专用】
+
+http://119.23.40.38:8900/
+
+8900 Nginx HTTP
+5800 Python
+3310 MySQL
+5001 Redis
+8330 WebSocket
+html_debug HTML
+cloudlearn_debug DB
+默认 CloudLearn 网站【福州大学电气工程与自动化学院】
+
+http://119.23.40.38:9000/
+
+9000 Nginx HTTP
+5000 Python
+3310 MySQL
+5001 Redis
+8430 WebSocket
+html HTML
+cloudlearn DB
+CloudLearn 长沙理工大学水利工程学院
+
+http://119.23.40.38:9100/
+
+9100 Nginx HTTP
+5100 Python
+3310 MySQL
+5001 Redis
+8530 WebSocket
+html_cslgdx HTML
+cloudlearn_cslgdx DB
+CloudLearn 天然气
+
+http://119.23.40.38:9200/
+
+9200 Nginx HTTP
+5200 Python
+3310 MySQL
+5001 Redis
+8630 WebSocket
+html_gas HTML
+cloudlearn_gas DB
+CloudLearn 浙江工商大学环境科学与工程学院
+
+http://119.23.40.38:9300/
+
+9300 Nginx HTTP
+5300 Python
+3310 MySQL
+5001 Redis
+8730 WebSocket
+html_zjgsdx HTML
+cloudlearn_zjgsdx DB
+CloudLearn 浙江大学能源工程学院
+
+http://119.23.40.38:9400/
+
+9400 Nginx HTTP
+5400 Python
+3310 MySQL
+5001 Redis
+8830 WebSocket
+html_zjdx HTML
+cloudlearn_zjdx DB
+CloudLearn 西安理工大学
+
+http://119.23.40.38:9500/
+
+9500 Nginx HTTP
+5500 Python
+3310 MySQL
+5001 Redis
+8930 WebSocket
+html_xalgdx HTML
+cloudlearn_xalgdx DB
+CloudLearn 贵州大学
+
+http://119.23.40.38:9600/
+
+9600 Nginx HTTP
+5600 Python
+3310 MySQL
+5001 Redis
+9030 WebSocket
+html_gzdx HTML
+cloudlearn_gzdx DB
+CloudLearn 西安建筑科技大学
+
+http://119.23.40.38:9700/
+
+9700 Nginx HTTP
+5700 Python
+3310 MySQL
+5001 Redis
+9130 WebSocket
+html_xajzkjdx HTML
+cloudlearn_xajzkjdx DB
+CloudLearn 上海交通大学
+
+http://119.23.40.38:9800/
+
+9800 Nginx HTTP
+5050 Python
+3310 MySQL
+5001 Redis
+9230 WebSocket
+html_shjtdx HTML
+cloudlearn_shjtdx DB
+CloudLearn 天津商业大学机械工程学院
+
+http://119.23.40.38:9900/
+
+9900 Nginx HTTP
+6050 Python
+3310 MySQL
+5001 Redis
+9330 WebSocket
+html_tjsydxjxgcxy HTML
+cloudlearn_tjsydxjxgcxy DB
+CloudLearn 清华大学机械工程学院
+
+http://119.23.40.38:10000/
+
+10000 Nginx HTTP
+6060 Python
+3310 MySQL
+5001 Redis
+9430 WebSocket
+html_qhdx HTML
+cloudlearn_qhdx DB
+CloudLearn 安徽建筑大学
+
+http://119.23.40.38:10100/
+
+10100 Nginx HTTP
+6100 Python
+3310 MySQL
+5001 Redis
+9530 WebSocket
+html_ahjzdx HTML
+cloudlearn_ahjzdx DB
+CloudLearn 武汉商学院
+
+http://119.23.40.38:10200/
+
+10200 Nginx HTTP
+6200 Python
+3310 MySQL
+5001 Redis
+9630 WebSocket
+html_whsxy HTML
+cloudlearn_whsxy DB
+CloudLearn华东理工大学
+
+http://119.23.40.38:10300/
+
+10300 NginxHTTP
+6300 Python
+3310 MySQL
+5001 Redis
+9730 WebSocket
+html_hdlgdx HTML
+cloudlearn_hdlgdx DB
+CloudLearn西北大学
+
+http://119.23.40.38:10400/
+
+10400 Nginx HTTP
+6400 Python
+3310 MySQL
+5001 Redis
+9830 WebSocket
+html_xbdx HTML
+cloudlearn_xbdx DB
+CloudLearn北京建筑大学
+
+http://119.23.40.38:10500/
+
+10500 Nginx HTTP
+6500 Python
+3310 MySQL
+5001 Redis
+9930 WebSocket
+html_bjjzdx HTML
+cloudlearn_bjjzdx DB
+CloudLearn上海应用技术大学城市建设与安全工程学院
+
+http://119.23.40.38:10600/
+
+10600 Nginx HTTP
+6600 Python
+3310 MySQL
+5001 Redis
+10030 WebSocket
+html_shyyjsdx HTML
+cloudlearn_shyyjsdx DB
+CloudLearn武汉大学
+
+http://119.23.40.38:10700/
+
+10700 Nginx HTTP
+6700 Python
+3310 MySQL
+5001 Redis
+10130 WebSocket
+html_whdx HTML
+cloudlearn_whdx DB
+CloudLearn福州大学至诚学院电气工程系
+
+http://119.23.40.38:10800/
+
+10800 Nginx HTTP
+6800 Python
+3310 MySQL
+5001 Redis
+10230 WebSocket
+html_zcxylearn HTML
+cloudlearn_zcxylearn DB
+武汉理工大学能源与动力工程学院
+
+http://119.23.40.38:10900/
+
+10900 Nginx HTTP
+6900 Python
+3310 MySQL
+5001 Redis
+10330 WebSocket
+html_whlgdx HTML
+cloudlearn_whlgdx DB
+长沙理工大学能源与动力工程学院
+
+http://119.23.40.38:11000
+
+11000 Nginx HTTP
+7000 Python
+3310 MySQL
+5001 Redis
+10430 WebSocket
+html_cslgdxndxy HTML
+cloudlearn_cslgdxndxy DB
+广西电力职业技术学院
+
+http://119.23.40.38:11100
+
+11100 Nginx HTTP
+7100 Python
+3310 MySQL
+5001 Redis
+10530 WebSocket
+html_gxdl HTML
+cloudlearn_gxdl DB
