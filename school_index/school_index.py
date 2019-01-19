@@ -12,8 +12,8 @@ def gen_id(input_file, nginx=8900, python=5800, webs=8330):
     data = [line.strip().split(',') for line in data]
     school_list = []
     p = Pinyin()
-
-    for i in range(len(data)):
+    # school = {}
+    for i in range(0,2):
         school = {}
         school['u_name'] = data[i][0]
         school['a_name'] = data[i][1]
@@ -28,7 +28,7 @@ def gen_id(input_file, nginx=8900, python=5800, webs=8330):
         school['HTML'] = 'html_' + abb
         school['DB'] = 'cloudlearn_' + abb
         school_list.append(school)
-    # print(school_list)
+    print(school_list)
     l_chr = '\t'
     with open('new_list.txt', 'a')as f:
         for school in school_list:
@@ -46,5 +46,5 @@ def gen_id(input_file, nginx=8900, python=5800, webs=8330):
 
 
 if __name__ == '__main__':
-    file = 'list.csv'
+    file = 'school_list.csv'
     gen_id(file)

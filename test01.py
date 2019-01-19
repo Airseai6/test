@@ -1,16 +1,19 @@
-#! python3
-# -*- coding:utf-8 -*-
+class test{
+public:
+    void operator()()
+    {
+        std::cout << "test" << std::endl;
+     }
 
-from decimal import *
+     void f1(){}
 
-def ask():
-    input_str = input("Please enter the price of your item");
-    try:
-        number = Decimal( input_str )
-        return number
-    except( InvalidOperation, ValueError, TypeError ) as e:
-        return ask()
+};
 
+std::function<void (int,int)> test()
+{
 
-number = ask()
-print(number)
+}
+int main()
+{
+
+}
