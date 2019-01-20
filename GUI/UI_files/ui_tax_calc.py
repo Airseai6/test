@@ -17,9 +17,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(588, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.pirce_box = QtWidgets.QTextEdit(self.centralwidget)
-        self.pirce_box.setGeometry(QtCore.QRect(300, 100, 104, 87))
-        self.pirce_box.setObjectName("pirce_box")
+        self.price_box = QtWidgets.QTextEdit(self.centralwidget)
+        self.price_box.setGeometry(QtCore.QRect(300, 100, 104, 87))
+        self.price_box.setObjectName("price_box")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(130, 140, 71, 31))
         self.label.setMinimumSize(QtCore.QSize(10, 10))
@@ -66,9 +66,19 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        # 后面新增的
+        self.calc_tax.clicked.connect(self.CalculateTax)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def CalculateTax(self):
+        # 计算部分新增的
+        price = int(self.price_box.toPlainText())
+        tax = (self.tax_rate.value())
+        total_price = price + ((tax / 100) * price)
+        total_price_string = "The total price with tax is: " + str(total_price)
+        self.result_window.setText(total_price_string)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "MainWindow", None, -1))
@@ -79,6 +89,7 @@ class Ui_MainWindow(object):
 
 
 if __name__ == '__main__':
+    # 生成以后主函数要自己加
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
