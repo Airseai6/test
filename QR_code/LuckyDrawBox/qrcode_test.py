@@ -2,7 +2,8 @@
 # -*- coding:utf-8 -*-
 
 import qrcode
-
+from io import BytesIO
+import base64
 
 def gen_qrcode(content):
     qr = qrcode.QRCode(
@@ -25,7 +26,12 @@ def gen_qrcode(content):
     qr.add_data(content)
     qr.make(fit=True)
     img = qr.make_image()
-    img.save('qrcode_temp.png')
+    # img.save('qrcode_temp.png')
+
+    buffered = BytesIO()
+    img.save(buffered, format="PNG")
+    img_str = base64.b64encode(buffered.getvalue())
+    return img_str
 
 
 if __name__ == '__main__':
