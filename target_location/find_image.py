@@ -74,8 +74,8 @@ def main(imgsrc, imgobj, confidence):
 
 
 if __name__ == '__main__':
-    imgsrc = 'grid.bmp'
-    target = 'dian.bmp'
-    r = main(imgsrc, target, 0.9)
+    imgsrc = 'test03.jpg'
+    target = 'test030.bmp'
+    r = main(imgsrc, target, 0.8)
     print(len(r))
     print(r)

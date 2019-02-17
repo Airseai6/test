@@ -16,7 +16,7 @@ import base64
 class LuckyWidget(QtWidgets.QMainWindow, main_UI.Ui_MainWindow):
     def __init__(self, parent=None):
         super().__init__()
-        self.initUI()
+        self.initUI()   
 
     def initUI(self):
         self.setupUi(self)
