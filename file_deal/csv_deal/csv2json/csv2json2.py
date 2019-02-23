@@ -28,6 +28,6 @@ def csv2json(input_file):
 
 
 if __name__ == '__main__':
-	input_file = 'DB4.csv'
+	input_file = '太阳时.csv'
 	csv2json(input_file)
 	print("解析结束！")

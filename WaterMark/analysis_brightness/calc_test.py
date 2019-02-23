@@ -33,6 +33,8 @@ def func(img, pic_path, pic):
         print(pic_path + " is bright!")
 
 
+# hist(pic_path)  #若要查看图片的灰度值分布情况,可以这个注释解除
+
 # 用于显示图片的灰度直方图
 def hist(pic_path):
     img = cv2.imread(pic_path, 0)
@@ -59,9 +61,7 @@ def readAllPictures(pics_path):
         if os.path.isfile(pic_path):
             allPics.append(pic_path)
             img = cv2.imread(pic_path)
-            print(type(img))
             func(img, pic_path, pic)
-            hist(pic_path)  #若要查看图片的灰度值分布情况,可以这个注释解除
     return allPics
 
 
@@ -78,8 +78,6 @@ def createDarkDir():
 
 
 if __name__ == '__main__':
-    # pics_path = sys.argv[0]  # 获取所给图片目录
-    pics_path = r'D:\Script\Python\test\WaterMark\analysis_brightness'
-    print(pics_path)
+    pics_path = sys.argv[1]  # 获取所给图片目录
     createDarkDir()
     allPics = readAllPictures(pics_path)
