@@ -10,8 +10,12 @@ def cal_hs(phi, delta, t):
     计算太阳高度角，sin_hs=sinφ*sinδ+cosφ*cosδ*cos t
     φ观测地地理纬度；δ太阳赤纬；（太阳赤纬与地理纬度都是北纬为正，南纬为负）；t地方时(时角)，每小时偏离15°
     """
+    phi = phi/180.0*pi
+    delta = delta/180.0*pi
+    t = t/180.0*pi
     sin_hs = sin(phi)*sin(delta) + cos(phi)*cos(delta)*cos(t)
     hs = asin(sin_hs)
+    hs = hs * 180.0 / pi
     return hs
 
 
@@ -21,9 +25,13 @@ def cal_as(phi, delta, t):
     as为关键词，用aas
     hs:太阳高度角；φ观测地地理纬度；δ太阳赤纬；t地方时(时角)。
     """
+    phi = phi/180.0*pi
+    delta = delta/180.0*pi
+    t = t/180.0*pi
     hs = cal_hs(phi, delta, t)
     cos_as = (sin(hs) * sin(phi) - sin(delta)) / (cos(hs) * cos(phi))
     aas = acos(cos_as)
+    aas = aas * 180.0 / pi
     return aas
 
 
@@ -57,6 +65,8 @@ def cal_delta(n):
     b = 2*pi*(n-1)/365
     coe = [0.006918, -0.399912, 0.070257, -0.006758, 0.000907, -0.002697, 0.00148]
     delta = coe[0]+coe[1]*cos(b)+coe[2]*sin(b)+coe[3]*cos(2*b)+coe[4]*sin(2*b)+coe[5]*cos(3*b)+coe[6]*sin(3*b)
+    delta = delta * 180 / pi
+    print('太阳赤纬度: ', delta)
     return delta
 
 
@@ -90,7 +100,7 @@ def cal_t(E, now_time, date, flag):
     # print(date, 'delta_time:', delta_time, 's')
     if flag == 1:
         now_time = time.strftime('%H:%M:%S', time.localtime(time.time()))
-    # print('Beijing time:', now_time)
+    print('Beijing time:', now_time)
     delta_t = (E-120)*4*60
     now_hou = int(now_time[:2])
     now_min = int(now_time[3:5])
@@ -101,7 +111,7 @@ def cal_t(E, now_time, date, flag):
     # local_sec = int(true_t%60)
     # print('local time: ', local_hou, local_min, local_sec)
     t = (true_t - 12*3600)/3600*15
-
+    print('t:', t)
     return t
 
 
@@ -116,16 +126,21 @@ def main(E, N, date, bj_time, flag=0):
     :return:
     """
     delta = cal_delta(cal_n(date))
-    t = cal_t(E, bj_time, date[6:], flag)
+    t = cal_t(E, bj_time, date[5:], flag)
     high_angle = cal_hs(N, delta, t)
     position_angle = cal_as(N, delta, t)
+
+    high_angle = u"%.3f°" % high_angle
+    position_angle = u"%.3f°" % position_angle
     return [high_angle, position_angle]
 
 
 if __name__ == '__main__':
     E = 120
     N = 23.5
-    date = '2019-02-23'
+    date = '2019-06-23'
+    date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    print('date:', date)
     bj_time = '08:23:31'
-    a, b = main(E, N, date, bj_time)
-    print(a, b)
+    a, b = main(E, N, date, bj_time, 1)
+    print('high angle:', a, 'position angle:', b)
