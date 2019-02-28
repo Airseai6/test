@@ -21,17 +21,21 @@ def cal_hs(phi, delta, t):
 
 def cal_as(phi, delta, t):
     """
+    南方向为零
     计算太阳方位角，cos_as=(sin_hs*sinφ-sinδ)/(cos_hs*cosφ)
     as为关键词，用aas
     hs:太阳高度角；φ观测地地理纬度；δ太阳赤纬；t地方时(时角)。
     """
+    hs = cal_hs(phi, delta, t)
+    hs = hs/180.0*pi
     phi = phi/180.0*pi
     delta = delta/180.0*pi
-    t = t/180.0*pi
-    hs = cal_hs(phi, delta, t)
     cos_as = (sin(hs) * sin(phi) - sin(delta)) / (cos(hs) * cos(phi))
+    print('cos_as:', cos_as)
     aas = acos(cos_as)
     aas = aas * 180.0 / pi
+    if t > 0:
+        aas = -aas
     return aas
 
 
@@ -141,6 +145,6 @@ if __name__ == '__main__':
     date = '2019-06-23'
     date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     print('date:', date)
-    bj_time = '08:23:31'
+    bj_time = '16:30:00'
     a, b = main(E, N, date, bj_time, 1)
     print('high angle:', a, 'position angle:', b)
