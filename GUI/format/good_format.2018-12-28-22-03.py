@@ -151,10 +151,12 @@ def getPrettyTable(d, indent = 4):
             i += [""] * (indent - len(i))
         try:
             t.add_row(i)
+            # print(type(t))
         except Exception as e:
             import traceback
             traceback.print_exc()
     return t
 
 print(getPrettyTable(crop, 4))
+# getPrettyTable(crop, 4)
 
