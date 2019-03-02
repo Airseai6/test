@@ -32,6 +32,13 @@ def chunkstring(string, length):
 
 
 def read_date(file_name, day_num=20, indent=7):
+    """
+    读取文件并打印想要内容
+    :param file_name:
+    :param day_num: 查询天数
+    :param indent: 内容的列数
+    :return:
+    """
     data = xlrd.open_workbook(file_name)
     sheet2 = data.sheet_by_index(1)
 
