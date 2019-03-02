@@ -10,7 +10,7 @@ import sys
 
 def cal_n(date):
     """
-    计算某天是一年中的第多少天
+    计算某天距2014-12-31多少天，（2015-01-01是第一天）
     :param date: 日期字符，例如：'2017-12-31'
     :return: 整型变量
     """
@@ -22,34 +22,38 @@ def cal_n(date):
         sum_data = sum(mon_nums[:mon - 1]) + day
     else:
         sum_data = day
-    if year % 4 == 0 and mon > 2:
-        sum_data += 1
+
+    if year == 2016 and mon > 2:
+        sum_data += 366
+    elif 2016 < year < 2020 or (year == 2020 and mon < 3):
+        sum_data += ((year-2015)*365+1)
+    elif year == 2020 and mon > 2:
+        sum_data += ((year - 2015) * 365 + 2)
     return sum_data
 
 
-def chunkstring(string, length):
-    return (string[0+i:length+i] for i in range(0, len(string), length))
-
-
-def read_date(file_name, day_num=20, indent=7):
+def read_date(file_name, sheet_name, day_num=20, indent=6):
     """
-    读取文件并打印想要内容
+    读取文件
     :param file_name:
     :param day_num: 查询天数
     :param indent: 内容的列数
     :return:
     """
     data = xlrd.open_workbook(file_name)
-    sheet2 = data.sheet_by_index(1)
+    sheet2 = data.sheet_by_name(sheet_name)
 
     pool1, pool2, pool3 = [], {}, []
     for i in range(1, sheet2.nrows):
         cell_value = sheet2.cell(i, 5).value
-        date = datetime(*xldate_as_tuple(cell_value, 0))
-        new_date = date.strftime('%Y-%m-%d')
-        pool1.append(new_date)
-        pool2[cal_n(new_date)] = new_date
-        pool3.append(cal_n(new_date))
+        if cell_value is '':
+            pool1.append('0')
+        else:
+            date = datetime(*xldate_as_tuple(cell_value, 0))
+            new_date = date.strftime('%Y-%m-%d')
+            pool1.append(new_date)
+            pool2[cal_n(new_date)] = new_date
+            pool3.append(cal_n(new_date))
     sort_pool = sorted(list(set(pool3)))
     today = datetime.now().strftime('%Y-%m-%d')
     i = 0
@@ -57,42 +61,70 @@ def read_date(file_name, day_num=20, indent=7):
         if item >= cal_n(today):
             break
         i += 1
-    print('-'*40)
-    print('下一个期限是', pool2[sort_pool[i]], ' 剩余', sort_pool[i] - cal_n(today), '天。')
-    print('接下来'+str(day_num)+'天到期的有：')
+
     rest = sort_pool[i:]
     line_find = []
     for rest_day in rest:
-        if 0 <= rest_day - cal_n(today) <= day_num:
+        delta = rest_day - cal_n(today)
+        if 0 <= delta <= day_num:
             date_find = pool2[rest_day]
             list_index = [j for j, x in enumerate(pool1) if x == date_find]
             for i in range(len(list_index)):
-                line_find.append(list_index[i])
-
-    t = PrettyTable([''.join(str(item).split()) for item in sheet2.row_values(0)])
+                line_find.append([list_index[i], delta])
+    content_list = []
     for row in line_find:
-        content = []
+        content = [sheet_name, row[0]+2]
         for i in range(indent):
-            content_cell = sheet2.row_values(row+1)[i]
+            content_cell = sheet2.row_values(row[0]+1)[i]
+            if i == 0:
+                content_cell = int(content_cell)
             if i == 5:
                 date = datetime(*xldate_as_tuple(content_cell, 0))
                 content_cell = date.strftime('%Y-%m-%d')
             content.append(str(content_cell))
+        content.append(row[1])
+        content_list.append(content)
+    return content_list
+
+
+def print_date(file_name, sheets, day_num):
+    contents = []
+    for sheet in sheets:
+        sheet_content = read_date(file_name, sheet, day_num)
+        for content in sheet_content:
+            contents.append(content)
+        contents = sorted(contents, key=lambda x:x[-1])
+    header = ['Sheet', 'Index', '编号', '客户名称', '项目名称', '项目编号', '购买产品', 'License到期日', '剩余天数']
+    t = PrettyTable([''.join(str(item).split()) for item in header])
+    remaining, deadline = [], []
+    for content in contents:
         t.add_row(content)
+        remaining.append(content[-1])
+        deadline.append(content[-2])
+
+    print('-'*40)
+    print('下一个期限是', deadline[remaining.index(min(remaining))], ' 剩余', min(remaining), '天。')
+    print('接下来'+str(day_num)+'天到期的有'+str(len(contents))+'项：')
     print(t)
 
 
-if __name__ == '__main__':
-    print('-'*40)
-    print('请确保本脚本与 license到期表.xlsx 在同一目录。')
-    file = 'license到期表.xlsx'
-    read_date(file, 20)
+def go():
+    file = '2011-2020年License到期统计--王杰.xlsx'
+    sheets = [str(i)+'年' for i in range(2017, 2020)]
+    print('-'*60)
+    print('请确保本脚本与 2011-2020年License到期统计--王杰.xlsx 在同一目录。')
+    print('正在读取并解析数据，请稍等~~~')
+    print_date(file, sheets, 20)
     while True:
         n = input('请输入想查询的天数（Q:退出）：')
-        if n=='Q' or n=='q':
+        if n == 'Q' or n == 'q':
             sys.exit()
         try:
             n = int(n)
-            read_date(file, n)
+            print_date(file, sheets, n)
         except:
             print('输入有误！')
+
+
+if __name__ == '__main__':
+    go()
