@@ -31,7 +31,9 @@ def location2tower(H, X, Y):
     return high_angle, position_angle
 
 
-def
+def location2index():
+
+
 
 if __name__ == '__main__':
     print(location2tower(250, 500, 500))

@@ -30,7 +30,30 @@
 # pattern1 = re.compile(p1)
 # print(pattern1.findall(key)) #发没发现，我怎么写成findall了？咋变了呢？
 
+# import math
+# print(math.sin(90/180*math.pi))
+# print(math.asin(1))
 
-import math
-print(math.sin(90/180*math.pi))
-print(math.asin(1))
+# print('' is not None)
+
+# from datetime import datetime
+# print(datetime.now())
+
+from math import *
+a = asin(900/1575)
+a = a/pi*180
+
+delta_h = 212
+Dm = 20
+r = 140
+b = atan(delta_h/r)
+# b = b/pi*180
+delta_r = Dm*(1.009/b - 0.063 + 0.4803*b)
+delta_z = Dm*(2.17 - 0.6589*b + 1.247*b*b)
+theta = 2*asin(0.5*delta_z/r)
+theta = theta/pi*180
+
+print('high_angle:', b)
+print('delta_R:', delta_r)
+print('delta_Z:', delta_z)
+print('next_location:', (r, u"%.3f°"%theta))
