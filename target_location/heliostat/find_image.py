@@ -78,8 +78,8 @@ if __name__ == '__main__':
     imgsrc big
     target small
     """
-    imgsrc = 'he_all02.png'
-    target = 'he.png'
+    imgsrc = 'IV-5.png'
+    target = 'hep3.bmp'
     r = main(imgsrc, target, 0.4)
     print(len(r))
     print(r)
