@@ -141,10 +141,10 @@ def main(E, N, date, bj_time, flag=0):
 
 if __name__ == '__main__':
     E = 120
-    N = 23.5
-    date = '2019-06-23'
+    N = 45
+    date = '2019-03-20'
     date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     print('date:', date)
-    bj_time = '16:30:00'
-    a, b = main(E, N, date, bj_time, 1)
+    bj_time = '12:00:00'
+    a, b = main(E, N, date, bj_time, 0)
     print('high angle:', a, 'position angle:', b)

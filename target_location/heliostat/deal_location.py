@@ -2,19 +2,33 @@
 # -*- coding:utf-8 -*-
 import math
 
+
+# def deal_location(pool, file_name):
+#     """
+#     give xiesi script
+#     :param pool:
+#     :param file_name:
+#     :return:
+#     """
+#     file_name = file_name + '.xml'
+#     blank = ' '*4
+#     with open(file_name, 'w', encoding='utf-8')as f:
+#         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+#         f.write(blank + '<root>\n')
+#         i = 0
+#         for item in pool:
+#             f.write(blank*2 + '<heliostat index="' + str(i) + '" x="' + str(item[0]) + '" y="' + str(item[1]) + '"/>\n')
+#             i += 1
+#         f.write(blank + '</root>\n')
+
+
 def deal_location(pool, file_name):
-    blank = ' '*4
-    with open(file_name, 'w', encoding='utf-8')as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        f.write(blank + '<root>\n')
-        i = 0
+    with open('location.csv', 'a+', encoding='utf-8') as f:
         for item in pool:
-            f.write(blank*2 + '<he index="' + str(i) + '" x="' + str(item[0]) + '" y="' + str(item[1]) + '"/>\n')
-            i += 1
-        f.write(blank + '</root>\n')
+            f.write(file_name + ',' + str(item[0]) + ',' + str(item[1]) + '\n')
 
 
-if __name__ == '__main__':
+def write_location():
     quadrant_I = ['location_I_1', 'location_I_2', 'location_I_3', 'location_I_4', 'location_I_5']
     quadrant_II = ['location_II_1', 'location_II_2', 'location_II_3', 'location_II_4', 'location_II_5']
     quadrant_III = ['location_III_1', 'location_III_2', 'location_III_3', 'location_III_4', 'location_III_5']
@@ -73,7 +87,7 @@ if __name__ == '__main__':
                 y = round((3200 - item[1]) / 2, 1)
                 pool.append((x, y))
         pool = sorted(pool, key=lambda x:abs(x[-1]), reverse=False)
-        file_name = quadrant + '.xml'
+        file_name = quadrant
         deal_location(pool, file_name)
 
     for quadrant in quadrant_II:
@@ -81,35 +95,35 @@ if __name__ == '__main__':
         if quadrant == 'location_II_1':
             pool = []
             for item in location_II_1:
-                x = -round(item[0] / 3, 1)
+                x = round((item[0]-1410) / 3, 1)
                 y = round((1410-item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_II_2':
             pool = []
             for item in location_II_2:
-                x = -round(item[0] / 3, 1)
+                x = round((item[0]-1920) / 3, 1)
                 y = round((1920 - item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_II_3':
             pool = []
             for item in location_II_3:
-                x = -round(item[0] / 3, 1)
+                x = round((item[0]-2700) / 3, 1)
                 y = round((2700 - item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_II_4':
             pool = []
             for item in location_II_4:
-                x = -round(item[0] / 2, 1)
+                x = round((item[0]-2240) / 2, 1)
                 y = round((2300 - item[1]) / 2, 1)
                 pool.append((x, y))
         if quadrant == 'location_II_5':
             pool = []
             for item in location_II_5:
-                x = -round(item[0] / 2, 1)
+                x = round((item[0]-2040) / 2, 1)
                 y = round((3200 - item[1]) / 2, 1)
                 pool.append((x, y))
         pool = sorted(pool, key=lambda x:abs(x[-1]), reverse=False)
-        file_name = quadrant + '.xml'
+        file_name = quadrant
         deal_location(pool, file_name)
 
     for quadrant in quadrant_III:
@@ -118,34 +132,34 @@ if __name__ == '__main__':
             pool = []
             for item in location_III_1:
                 x = -round((1410-item[0]) / 3, 1)
-                y = -round((1410-item[1]) / 3, 1)
+                y = -round((item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_III_2':
             pool = []
             for item in location_III_2:
                 x = -round((1920 - item[0]) / 3, 1)
-                y = -round((1920 - item[1]) / 3, 1)
+                y = -round((item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_III_3':
             pool = []
             for item in location_III_3:
                 x = -round((2700 - item[0]) / 3, 1)
-                y = -round((2700 - item[1]) / 3, 1)
+                y = -round((item[1]) / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_III_4':
             pool = []
             for item in location_III_4:
                 x = -(2240 - item[0]) / 2
-                y = -(2240 - item[1]) / 2
+                y = -(item[1]) / 2
                 pool.append((x, y))
         if quadrant == 'location_III_5':
             pool = []
             for item in location_III_5:
                 x = -(2240 - item[0]) / 2
-                y = -(2240 - item[1]) / 2
+                y = -(item[1]) / 2
                 pool.append((x, y))
         pool = sorted(pool, key=lambda x:abs(x[-1]), reverse=False)
-        file_name = quadrant + '.xml'
+        file_name = quadrant
         deal_location(pool, file_name)
 
     for quadrant in quadrant_IV:
@@ -154,32 +168,36 @@ if __name__ == '__main__':
             pool = []
             for item in location_IV_1:
                 x = round(item[0] / 3, 1)
-                y = round(item[1] / 3, 1)
+                y = -round(item[1] / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_IV_2':
             pool = []
             for item in location_IV_2:
                 x = round(item[0] / 3, 1)
-                y = round(item[1] / 3, 1)
+                y = -round(item[1] / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_IV_3':
             pool = []
             for item in location_IV_3:
                 x = round(item[0] / 3, 1)
-                y = round(item[1] / 3, 1)
+                y = -round(item[1] / 3, 1)
                 pool.append((x, y))
         if quadrant == 'location_IV_4':
             pool = []
             for item in location_IV_4:
                 x = round(item[0] / 2, 1)
-                y = item[1] / 2
+                y = -item[1] / 2
                 pool.append((x, y))
         if quadrant == 'location_IV_5':
             pool = []
             for item in location_IV_5:
                 x = round(item[0] / 2, 1)
-                y = item[1] / 2
+                y = -item[1] / 2
                 pool.append((x, y))
         pool = sorted(pool, key=lambda x:abs(x[-1]), reverse=False)
-        file_name = quadrant + '.xml'
+        file_name = quadrant
         deal_location(pool, file_name)
+
+
+if __name__ == '__main__':
+    write_location()
