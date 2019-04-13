@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="利用太阳电池组将太阳能直接转换为电能称为（  ）。" explain="" img="" index="15">
+    <alternative correct="True" describe="光伏发电" index="A"/>
+    <alternative correct="False" describe="光照发电" index="B"/>
+    <alternative correct="False" describe="光热发电" index="C"/>
+    <alternative correct="False" describe="光电池发电" index="D"/>
+  </issue>
+</root>

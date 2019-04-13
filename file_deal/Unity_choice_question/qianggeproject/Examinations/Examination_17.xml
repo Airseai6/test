@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳能源来自太阳内部物质的（     ）。" explain="" img="" index="37">
+    <alternative correct="True" describe="核聚变" index="A"/>
+    <alternative correct="False" describe="核裂变" index="B"/>
+    <alternative correct="False" describe="动能" index="C"/>
+    <alternative correct="False" describe="化学变化" index="D"/>
+  </issue>
+</root>

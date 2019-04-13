@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳能热水器是人们利用太阳能的以下那种方式？（  ）" explain="" img="" index="2">
+    <alternative correct="False" describe="光电转化" index="A"/>
+    <alternative correct="True" describe="光热转化" index="B"/>
+    <alternative correct="False" describe="光化学转化" index="C"/>
+    <alternative correct="False" describe="光音转化" index="D"/>
+  </issue>
+</root>

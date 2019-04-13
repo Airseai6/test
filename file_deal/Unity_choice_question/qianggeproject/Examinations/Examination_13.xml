@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="自动跟踪和聚光电池一般都用在（    ）。" explain="" img="" index="27">
+    <alternative correct="False" describe="光伏产品" index="A"/>
+    <alternative correct="False" describe="农村电气化" index="B"/>
+    <alternative correct="True" describe="荒漠电站" index="C"/>
+    <alternative correct="False" describe="通信和工业" index="D"/>
+  </issue>
+</root>

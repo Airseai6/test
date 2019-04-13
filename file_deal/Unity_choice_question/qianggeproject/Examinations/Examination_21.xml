@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="人们根据对能源利用成熟程度的不同，  把能源分成常规能源和新能源两大类，下列属于常规能源的是：（	 ）。" explain="" img="" index="41">
+    <alternative correct="False" describe="地热能" index="A"/>
+    <alternative correct="False" describe="太阳能" index="B"/>
+    <alternative correct="False" describe="潮汐能" index="C"/>
+    <alternative correct="True" describe="矿物能" index="D"/>
+  </issue>
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="利用太阳能将工质(油或水)加热，使生产的蒸汽区驱动汽轮发电机组，称为（  ）。" explain="" img="" index="16">
+    <alternative correct="False" describe="光伏发电" index="A"/>
+    <alternative correct="False" describe="光照发电" index="B"/>
+    <alternative correct="True" describe="光热发电" index="C"/>
+    <alternative correct="False" describe="光电池发电" index="D"/>
+  </issue>
+</root>

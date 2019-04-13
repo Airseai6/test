@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="地热的发电原理和（    ）发电时一样的。" explain="" img="" index="46">
+    <alternative correct="True" describe="火力" index="A"/>
+    <alternative correct="False" describe="水力" index="B"/>
+    <alternative correct="False" describe="太阳能" index="C"/>
+    <alternative correct="False" describe="风力" index="D"/>
+  </issue>
+</root>

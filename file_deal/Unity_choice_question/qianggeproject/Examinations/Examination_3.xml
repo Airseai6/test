@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下列选项中属于间接光发电的是（     ）。" explain="" img="" index="12">
+    <alternative correct="False" describe="光伏发电" index="A"/>
+    <alternative correct="True" describe="光生物电池" index="B"/>
+    <alternative correct="False" describe="光耦极子发电" index="C"/>
+    <alternative correct="False" describe="光照发电" index="D"/>
+  </issue>
+</root>

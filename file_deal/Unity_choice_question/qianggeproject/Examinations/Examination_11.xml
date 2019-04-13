@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="给太阳电池施加反向电压，在不超过击穿电压前，电池电流随着反向电压增大而（  ）。" explain="" img="" index="24">
+    <alternative correct="False" describe="增大" index="A"/>
+    <alternative correct="False" describe="减小" index="B"/>
+    <alternative correct="True" describe="保持相对平坦" index="C"/>
+    <alternative correct="False" describe="先增大后减小" index="D"/>
+  </issue>
+</root>

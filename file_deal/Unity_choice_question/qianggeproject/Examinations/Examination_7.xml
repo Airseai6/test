@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="我国太阳能资源年太阳辐射总量   6680～ 8400 MJ/㎡，相当于日辐射量  5.1～6.4KWh/ ㎡的地区，属于（	 ）类地区。" explain="" img="" index="20">
+    <alternative correct="True" describe="I" index="A"/>
+    <alternative correct="False" describe="II" index="B"/>
+    <alternative correct="False" describe="III" index="C"/>
+    <alternative correct="False" describe="IV" index="D"/>
+  </issue>
+</root>

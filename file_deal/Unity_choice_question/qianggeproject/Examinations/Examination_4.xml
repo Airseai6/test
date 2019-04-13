@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="以下哪些不是热斑效应的根源（    ）。" explain="" img="" index="14">
+    <alternative correct="False" describe="个别坏电池的混入" index="A"/>
+    <alternative correct="False" describe="电极焊片虚焊" index="B"/>
+    <alternative correct="False" describe="电池由裂纹演变为破碎" index="C"/>
+    <alternative correct="True" describe="电池与电池间联结不紧密" index="D"/>
+  </issue>
+</root>

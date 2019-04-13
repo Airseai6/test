@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="i1">
+        北京象新力有限公司~
+    </div>
+<script>
+    function f1(){
+    var tag = document.getElementById("i1");
+    var content = tag.innerText;
+    var f = content.charAt(0);
+    var l = content.substring(1, content.length);
+    var new_content = l + f;
+    tag.innerText = new_content;
+    }
+
+    setInterval("f1()", 800);
+
+</script>
+</body>
+</html>

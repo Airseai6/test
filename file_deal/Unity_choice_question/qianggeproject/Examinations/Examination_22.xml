@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下列不属于清洁能源的是：（    ）。" explain="" img="" index="42">
+    <alternative correct="False" describe="太阳能" index="A"/>
+    <alternative correct="False" describe="风能" index="B"/>
+    <alternative correct="True" describe="煤炭" index="C"/>
+    <alternative correct="False" describe="核能" index="D"/>
+  </issue>
+</root>

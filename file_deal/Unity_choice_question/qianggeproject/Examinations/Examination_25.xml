@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下列哪一项不属于新能源。（    ）" explain="" img="" index="47">
+    <alternative correct="False" describe="潮汐能" index="A"/>
+    <alternative correct="False" describe="风能" index="B"/>
+    <alternative correct="False" describe="核能" index="C"/>
+    <alternative correct="True" describe="水能" index="D"/>
+  </issue>
+</root>

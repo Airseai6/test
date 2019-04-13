@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="我国属于太阳能资源丰富的国家之一，我国（	）的地区年日照大于	2000小时，太阳能资源的理论储量达每年	17000  亿吨标准煤。" explain="" img="" index="39">
+    <alternative correct="False" describe="1/3" index="A"/>
+    <alternative correct="True" describe="2/3" index="B"/>
+    <alternative correct="False" describe="1/4" index="C"/>
+    <alternative correct="False" describe="3/4" index="D"/>
+  </issue>
+</root>

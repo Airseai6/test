@@ -8,8 +8,7 @@
 import scrapy
 
 
-class Test01Item(scrapy.Item):
+class RenrenItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    author = scrapy.Field()
-    content = scrapy.Field()
+    pass

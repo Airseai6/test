@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="沼气电站应建设在哪里比较合适（     ）。" explain="" img="" index="51">
+    <alternative correct="True" describe="山区农村地区" index="A"/>
+    <alternative correct="False" describe="城市地区" index="B"/>
+    <alternative correct="False" describe="沿海地区" index="C"/>
+    <alternative correct="False" describe="郊区" index="D"/>
+  </issue></root>

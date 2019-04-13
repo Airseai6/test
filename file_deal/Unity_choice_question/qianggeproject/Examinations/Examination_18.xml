@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="虽然到达地球的太阳能总量很大，但它能量密度很小。地球表面每平方米的面积上通常得到的太阳能最多不过（ ）。" explain="" img="" index="38">
+    <alternative correct="False" describe="500 瓦" index="A"/>
+    <alternative correct="False" describe="800 瓦" index="B"/>
+    <alternative correct="True" describe="1000 瓦" index="C"/>
+    <alternative correct="False" describe="1200 瓦" index="D"/>
+  </issue>
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下面哪一项不是生物质能发电的优点（    ）。" explain="" img="" index="49">
+    <alternative correct="False" describe="电能质量好" index="A"/>
+    <alternative correct="False" describe="不具有波动性" index="B"/>
+    <alternative correct="False" describe="不具有间歇性" index="C"/>
+    <alternative correct="True" describe="发电效率高" index="D"/>
+  </issue>
+</root>

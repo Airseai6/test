@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳表面温度高达（   ）。" explain="" img="" index="36">
+    <alternative correct="False" describe="3000 度" index="A"/>
+    <alternative correct="False" describe="4500	度" index="B"/>
+    <alternative correct="True" describe="6000	度" index="C"/>
+    <alternative correct="False" describe="8500 度" index="D"/>
+  </issue>
+</root>

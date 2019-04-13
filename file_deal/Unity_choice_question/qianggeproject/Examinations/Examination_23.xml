@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳能光热发电的三种主流技术不包括（    ）。" explain="" img="" index="43">
+    <alternative correct="False" describe="槽式发电技术" index="A"/>
+    <alternative correct="False" describe="塔式发电技术" index="B"/>
+    <alternative correct="True" describe="晶硅发电技术" index="C"/>
+    <alternative correct="False" describe="碟式发电技术" index="D"/>
+  </issue>
+</root>

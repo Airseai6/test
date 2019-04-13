@@ -1,0 +1,306 @@
+  <issue describe="当光伏电站设计为不可逆并网方式时，应配置（  ）保护。" explain="" img="" index="1">
+    <alternative correct="True" describe="逆向功率" index="A"/>
+    <alternative correct="False" describe="过流" index="B"/>
+    <alternative correct="False" describe="过压" index="C"/>
+    <alternative correct="False" describe="过热" index="D"/>
+  </issue>
+  <issue describe="太阳能热水器是人们利用太阳能的以下那种方式？（  ）" explain="" img="" index="2">
+    <alternative correct="False" describe="光电转化" index="A"/>
+    <alternative correct="True" describe="光热转化" index="B"/>
+    <alternative correct="False" describe="光化学转化" index="C"/>
+    <alternative correct="False" describe="光音转化" index="D"/>
+  </issue>
+  <issue describe="太阳能电池是人们利用太阳能的以下那种方式？（  ）" explain="" img="" index="3">
+    <alternative correct="True" describe="光电转化" index="A"/>
+    <alternative correct="False" describe="光热转化" index="B"/>
+    <alternative correct="False" describe="光化学转化" index="C"/>
+    <alternative correct="False" describe="光音转化" index="D"/>
+  </issue>
+  <issue describe="以下不属于太阳能光伏电池材料的是（	 ）。" explain="" img="" index="4">
+    <alternative correct="False" describe="硫化镉" index="A"/>
+    <alternative correct="False" describe="砷化镓" index="B"/>
+    <alternative correct="True" describe="氟化铵" index="C"/>
+    <alternative correct="False" describe="多晶硅" index="D"/>
+  </issue>
+  <issue describe="我国第一个太阳能光伏并网发电示范项目位于什么地方？（ ）" explain="" img="" index="5">
+    <alternative correct="False" describe="云南石林" index="A"/>
+    <alternative correct="False" describe="江苏无锡" index="B"/>
+    <alternative correct="True" describe="甘肃敦煌" index="C"/>
+    <alternative correct="False" describe="宁夏太阳山" index="D"/>
+  </issue>
+  <issue describe="光伏产业价值链中，硅片生产为第（    ）个环节" explain="" img="" index="6">
+    <alternative correct="False" describe="一" index="A"/>
+    <alternative correct="True" describe="二" index="B"/>
+    <alternative correct="False" describe="三" index="C"/>
+    <alternative correct="False" describe="四" index="D"/>
+  </issue>
+  <issue describe="光伏电站并网检验的关键部件是光伏（     ）。" explain="" img="" index="7">
+    <alternative correct="False" describe="电池" index="A"/>
+    <alternative correct="True" describe="逆变器" index="B"/>
+    <alternative correct="False" describe="整流器" index="C"/>
+    <alternative correct="False" describe="以上都正确" index="D"/>
+  </issue>
+  <issue describe="光伏于建筑结合的方式有两种，分别为	BIPV  和 BPV，其中对 BIPV  解释正确的是（   ）。" explain="" img="" index="8">
+    <alternative correct="True" describe="光伏建筑一体化" index="A"/>
+    <alternative correct="False" describe="风光储能系统" index="B"/>
+    <alternative correct="False" describe="光伏系统附着在建筑上" index="C"/>
+    <alternative correct="False" describe="光伏 - 建筑-储能系统" index="D"/>
+  </issue>
+  <issue describe="光伏于建筑结合的方式有两种，分别为	BIPV  和 BAPV，其中对	BAPV解释正确的是（  ）。" explain="" img="" index="9">
+    <alternative correct="False" describe="光伏建筑一体化" index="A"/>
+    <alternative correct="False" describe="风光储能系统" index="B"/>
+    <alternative correct="True" describe="光伏系统附着在建筑上" index="C"/>
+    <alternative correct="False" describe="光伏 - 建筑-储能系统" index="D"/>
+  </issue>
+  <issue describe="以下哪些不是非晶硅太阳能电池的优点（    ）。" explain="" img="" index="10">
+    <alternative correct="False" describe="衰减弱" index="A"/>
+    <alternative correct="False" describe="成本低" index="B"/>
+    <alternative correct="False" describe="重量轻" index="C"/>
+    <alternative correct="True" describe="稳定性好" index="D"/>
+  </issue>
+  <issue describe="下列选项中属于直接光发电的是（    ）。" explain="" img="" index="11">
+    <alternative correct="False" describe="光热动力发电" index="A"/>
+    <alternative correct="False" describe="光生物电池" index="B"/>
+    <alternative correct="True" describe="光耦极子发电" index="C"/>
+    <alternative correct="False" describe="热光伏发电" index="D"/>
+  </issue>
+  <issue describe="下列选项中属于间接光发电的是（     ）。" explain="" img="" index="12">
+    <alternative correct="False" describe="光伏发电" index="A"/>
+    <alternative correct="True" describe="光生物电池" index="B"/>
+    <alternative correct="False" describe="光耦极子发电" index="C"/>
+    <alternative correct="False" describe="光照发电" index="D"/>
+  </issue>
+  <issue describe="华尔夫(M.Wolf )经过详细讨论得到硅太阳能电池在	AM0 光谱条件下为（    ）  。" explain="" img="" index="13">
+    <alternative correct="False" describe="20%" index="A"/>
+    <alternative correct="False" describe="21" index="B"/>
+    <alternative correct="False" describe="7%	C" index="C"/>
+    <alternative correct="True" describe="25%" index="D"/>
+  </issue>
+  <issue describe="以下哪些不是热斑效应的根源（    ）。" explain="" img="" index="14">
+    <alternative correct="False" describe="个别坏电池的混入" index="A"/>
+    <alternative correct="False" describe="电极焊片虚焊" index="B"/>
+    <alternative correct="False" describe="电池由裂纹演变为破碎" index="C"/>
+    <alternative correct="True" describe="电池与电池间联结不紧密" index="D"/>
+  </issue>
+  <issue describe="利用太阳电池组将太阳能直接转换为电能称为（  ）。" explain="" img="" index="15">
+    <alternative correct="True" describe="光伏发电" index="A"/>
+    <alternative correct="False" describe="光照发电" index="B"/>
+    <alternative correct="False" describe="光热发电" index="C"/>
+    <alternative correct="False" describe="光电池发电" index="D"/>
+  </issue>
+  <issue describe="利用太阳能将工质(油或水)加热，使生产的蒸汽区驱动汽轮发电机组，称为（  ）。" explain="" img="" index="16">
+    <alternative correct="False" describe="光伏发电" index="A"/>
+    <alternative correct="False" describe="光照发电" index="B"/>
+    <alternative correct="True" describe="光热发电" index="C"/>
+    <alternative correct="False" describe="光电池发电" index="D"/>
+  </issue>
+  <issue describe="以下哪些不属于目前世界范围内独立光伏系统的应用领域（ ）。" explain="" img="" index="17">
+    <alternative correct="False" describe="农村电气化" index="A"/>
+    <alternative correct="False" describe="通信和工业应用" index="B"/>
+    <alternative correct="False" describe="光伏产品" index="C"/>
+    <alternative correct="True" describe="光伏一体化" index="D"/>
+  </issue>
+  <issue describe="以下哪些属于目前世界范围内并网光伏系统的应用领域（ ）。" explain="" img="" index="18">
+    <alternative correct="False" describe="农村电气化" index="A"/>
+    <alternative correct="False" describe="通信和工业应用" index="B"/>
+    <alternative correct="False" describe="光伏产品" index="C"/>
+    <alternative correct="True" describe="大型光伏电站" index="D"/>
+  </issue>
+  <issue describe="并网光伏发电系统的设计时首先要进行（     ）。" explain="" img="" index="19">
+    <alternative correct="True" describe="可行性研究" index="A"/>
+    <alternative correct="False" describe="技术方案确定" index="B"/>
+    <alternative correct="False" describe="设备选型" index="C"/>
+    <alternative correct="False" describe="工程设计" index="D"/>
+  </issue>
+  <issue describe="我国太阳能资源年太阳辐射总量   6680～ 8400 MJ/㎡，相当于日辐射量  5.1～6.4KWh/ ㎡的地区，属于（	 ）类地区。" explain="" img="" index="20">
+    <alternative correct="True" describe="I" index="A"/>
+    <alternative correct="False" describe="II" index="B"/>
+    <alternative correct="False" describe="III" index="C"/>
+    <alternative correct="False" describe="IV" index="D"/>
+  </issue>
+  <issue describe="我国第 I  类太阳能资源区有（    ）。" explain="" img="" index="21">
+    <alternative correct="True" describe="拉萨、青海和甘肃敦煌" index="A"/>
+    <alternative correct="False" describe="西藏、青海和乌鲁木齐" index="B"/>
+    <alternative correct="False" describe="西藏、青海和云南" index="C"/>
+    <alternative correct="False" describe="西藏、青海和哈尔滨" index="D"/>
+  </issue>
+  <issue describe="我国太阳能资源年太阳辐射总量   5850-6680 MJ/m2 ，相当于日辐射量  4.5～5.1KWh/ ㎡的地区，属于（	 ）类地区。" explain="" img="" index="22">
+    <alternative correct="False" describe="I" index="A"/>
+    <alternative correct="True" describe="II" index="B"/>
+    <alternative correct="False" describe="III" index="C"/>
+    <alternative correct="False" describe="IV" index="D"/>
+  </issue>
+  <issue describe="太阳电池的功率随光照强度升高而（     ）。" explain="" img="" index="23">
+    <alternative correct="True" describe="增大" index="A"/>
+    <alternative correct="False" describe="减小" index="B"/>
+    <alternative correct="False" describe="无关" index="C"/>
+    <alternative correct="False" describe="先增大后减小" index="D"/>
+  </issue>
+  <issue describe="给太阳电池施加反向电压，在不超过击穿电压前，电池电流随着反向电压增大而（  ）。" explain="" img="" index="24">
+    <alternative correct="False" describe="增大" index="A"/>
+    <alternative correct="False" describe="减小" index="B"/>
+    <alternative correct="True" describe="保持相对平坦" index="C"/>
+    <alternative correct="False" describe="先增大后减小" index="D"/>
+  </issue>
+  <issue describe="太阳能电池的电流随着电压增大而（     ）。" explain="" img="" index="25">
+    <alternative correct="True" describe="先保持 相对 平坦 ，后 减小" index="A"/>
+    <alternative correct="False" describe="先减小 ，后 保持相 对平 坦" index="B"/>
+    <alternative correct="False" describe="先增大后减" index="C"/>
+    <alternative correct="False" describe="持续增大" index="D"/>
+  </issue>
+  <issue describe="太阳电池与建筑结合后还具有最为重要的特性为（ ）。" explain="" img="" index="26">
+    <alternative correct="False" describe="遮光" index="A"/>
+    <alternative correct="False" describe="保温" index="B"/>
+    <alternative correct="False" describe="装饰" index="C"/>
+    <alternative correct="True" describe="发电" index="D"/>
+  </issue>
+  <issue describe="自动跟踪和聚光电池一般都用在（    ）。" explain="" img="" index="27">
+    <alternative correct="False" describe="光伏产品" index="A"/>
+    <alternative correct="False" describe="农村电气化" index="B"/>
+    <alternative correct="True" describe="荒漠电站" index="C"/>
+    <alternative correct="False" describe="通信和工业" index="D"/>
+  </issue>
+  <issue describe="以下哪项不是对光伏并网逆变器的核心要求（     ）。" explain="" img="" index="28">
+    <alternative correct="False" describe="电子兼容技术" index="A"/>
+    <alternative correct="False" describe="最大功率点跟踪技术" index="B"/>
+    <alternative correct="False" describe="输出电流总谐波" index="C"/>
+    <alternative correct="True" describe="结构简单" index="D"/>
+  </issue>
+  <issue describe="太阳能光热发电中的抛物面槽式发电属于（      ）。" explain="" img="" index="29">
+    <alternative correct="False" describe="高温" index="A"/>
+    <alternative correct="True" describe="中温" index="B"/>
+    <alternative correct="False" describe="低温" index="C"/>
+    <alternative correct="False" describe="恒温" index="D"/>
+  </issue>
+  <issue describe="国家首个光热发电特许权招标项目为（    ）。" explain="" img="" index="30">
+    <alternative correct="False" describe="敦煌项目" index="A"/>
+    <alternative correct="False" describe="上海市崇明岛项目" index="B"/>
+    <alternative correct="False" describe="青海省位处柴达木盆地" index="C"/>
+    <alternative correct="True" describe="内蒙 古鄂 尔多斯项目" index="D"/>
+  </issue>
+  <issue describe="光伏电源引起的自给非正常孤岛问题，需加装有效的（ ）。" explain="" img="" index="31">
+    <alternative correct="False" describe="孤岛检测装置" index="A"/>
+    <alternative correct="False" describe="孤岛告警装置" index="B"/>
+    <alternative correct="True" describe="反孤岛保护装置" index="C"/>
+    <alternative correct="False" describe="孤岛分析装置" index="D"/>
+  </issue>
+  <issue describe="以下哪些不是关于光伏发电的国家标准（    ）。" explain="" img="" index="32">
+    <alternative correct="False" describe="光伏发电站接入电力系统技术规定" index="A"/>
+    <alternative correct="False" describe="光伏系统并网技术要求" index="B"/>
+    <alternative correct="False" describe="光伏（ PV）系统电网接口特性" index="C"/>
+    <alternative correct="True" describe="光伏并网检测规定" index="D"/>
+  </issue>
+  <issue describe="以下哪些是我国光伏发电的特点（    ）。" explain="" img="" index="33">
+    <alternative correct="False" describe="大规模开发，中高压接入" index="A"/>
+    <alternative correct="False" describe="大规模集中开发、低电压接入”" index="B"/>
+    <alternative correct="False" describe="分散开发、低电压就地接入" index="C"/>
+    <alternative correct="True" describe="A	和 C 均正确" index="D"/>
+  </issue>
+  <issue describe="以下那项不属于光伏发电并网性能（    ）。" explain="" img="" index="34">
+    <alternative correct="False" describe="电能质量" index="A"/>
+    <alternative correct="False" describe="功率控制与电压调节" index="B"/>
+    <alternative correct="False" describe="电网异常时的响应特性" index="C"/>
+    <alternative correct="True" describe="通信与信号" index="D"/>
+  </issue>
+  <issue describe="太阳能资源“分散开发、就地消纳”的建筑光伏主方式，会对现在的中、低压电网产生哪些影响（  ）。" explain="" img="" index="35">
+    <alternative correct="True" describe="改变系统电源结构及潮流分布" index="A"/>
+    <alternative correct="False" describe="改变系统转动惯量及潮流分布" index="B"/>
+    <alternative correct="False" describe="改变系统网络结构及潮流分布" index="C"/>
+    <alternative correct="False" describe="改变系统转动惯量及网络结构" index="D"/>
+  </issue>
+  <issue describe="太阳表面温度高达（   ）。" explain="" img="" index="36">
+    <alternative correct="False" describe="3000 度" index="A"/>
+    <alternative correct="False" describe="4500	度" index="B"/>
+    <alternative correct="True" describe="6000	度" index="C"/>
+    <alternative correct="False" describe="8500 度" index="D"/>
+  </issue>
+  <issue describe="太阳能源来自太阳内部物质的（     ）。" explain="" img="" index="37">
+    <alternative correct="True" describe="核聚变" index="A"/>
+    <alternative correct="False" describe="核裂变" index="B"/>
+    <alternative correct="False" describe="动能" index="C"/>
+    <alternative correct="False" describe="化学变化" index="D"/>
+  </issue>
+  <issue describe="虽然到达地球的太阳能总量很大，但它能量密度很小。地球表面每平方米的面积上通常得到的太阳能最多不过（ ）。" explain="" img="" index="38">
+    <alternative correct="False" describe="500 瓦" index="A"/>
+    <alternative correct="False" describe="800 瓦" index="B"/>
+    <alternative correct="True" describe="1000 瓦" index="C"/>
+    <alternative correct="False" describe="1200 瓦" index="D"/>
+  </issue>
+  <issue describe="我国属于太阳能资源丰富的国家之一，我国（	）的地区年日照大于	2000小时，太阳能资源的理论储量达每年	17000  亿吨标准煤。" explain="" img="" index="39">
+    <alternative correct="False" describe="1/3" index="A"/>
+    <alternative correct="True" describe="2/3" index="B"/>
+    <alternative correct="False" describe="1/4" index="C"/>
+    <alternative correct="False" describe="3/4" index="D"/>
+  </issue>
+  <issue describe="下述能源中，由太阳能转化来的是（     ）。" explain="" img="" index="40">
+    <alternative correct="False" describe="核能" index="A"/>
+    <alternative correct="True" describe="生物质能" index="B"/>
+    <alternative correct="False" describe="地热能" index="C"/>
+    <alternative correct="False" describe="潮汐能" index="D"/>
+  </issue>
+  <issue describe="人们根据对能源利用成熟程度的不同，  把能源分成常规能源和新能源两大类，下列属于常规能源的是：（	 ）。" explain="" img="" index="41">
+    <alternative correct="False" describe="地热能" index="A"/>
+    <alternative correct="False" describe="太阳能" index="B"/>
+    <alternative correct="False" describe="潮汐能" index="C"/>
+    <alternative correct="True" describe="矿物能" index="D"/>
+  </issue>
+  <issue describe="下列不属于清洁能源的是：（    ）。" explain="" img="" index="42">
+    <alternative correct="False" describe="太阳能" index="A"/>
+    <alternative correct="False" describe="风能" index="B"/>
+    <alternative correct="True" describe="煤炭" index="C"/>
+    <alternative correct="False" describe="核能" index="D"/>
+  </issue>
+  <issue describe="太阳能光热发电的三种主流技术不包括（    ）。" explain="" img="" index="43">
+    <alternative correct="False" describe="槽式发电技术" index="A"/>
+    <alternative correct="False" describe="塔式发电技术" index="B"/>
+    <alternative correct="True" describe="晶硅发电技术" index="C"/>
+    <alternative correct="False" describe="碟式发电技术" index="D"/>
+  </issue>
+  <issue describe="1839  年，法国物理学家（	  ）发现了光伏效应。" explain="" img="" index="44">
+    <alternative correct="True" describe="贝克勒尔" index="A"/>
+    <alternative correct="False" describe="普林斯" index="B"/>
+    <alternative correct="False" describe="麦克斯韦" index="C"/>
+    <alternative correct="False" describe="布儒斯特" index="D"/>
+  </issue>
+  <issue describe="太阳能电池阵列是根据负荷需要确定所需串联的模块数量，一般是将其额定电压提高（  ），在确定模块串联数。" explain="" img="" index="45">
+    <alternative correct="False" describe="5%" index="A"/>
+    <alternative correct="False" describe="10%" index="B"/>
+    <alternative correct="True" describe="10%" index="C"/>
+    <alternative correct="False" describe="15%" index="D"/>
+  </issue>
+  <issue describe="地热的发电原理和（    ）发电时一样的。" explain="" img="" index="46">
+    <alternative correct="True" describe="火力" index="A"/>
+    <alternative correct="False" describe="水力" index="B"/>
+    <alternative correct="False" describe="太阳能" index="C"/>
+    <alternative correct="False" describe="风力" index="D"/>
+  </issue>
+  <issue describe="下列哪一项不属于新能源。（    ）" explain="" img="" index="47">
+    <alternative correct="False" describe="潮汐能" index="A"/>
+    <alternative correct="False" describe="风能" index="B"/>
+    <alternative correct="False" describe="核能" index="C"/>
+    <alternative correct="True" describe="水能" index="D"/>
+  </issue>
+  <issue describe="下列选项组中不全部属于新能源的是（  ）  。" explain="" img="" index="48">
+    <alternative correct="False" describe="蓄力、潮汐能" index="A"/>
+    <alternative correct="False" describe="生物质、油页岩" index="B"/>
+    <alternative correct="False" describe="焦油沙、太阳能" index="C"/>
+    <alternative correct="True" describe="石油、核能" index="D"/>
+  </issue>
+  <issue describe="下面哪一项不是生物质能发电的优点（    ）。" explain="" img="" index="49">
+    <alternative correct="False" describe="电能质量好" index="A"/>
+    <alternative correct="False" describe="不具有波动性" index="B"/>
+    <alternative correct="False" describe="不具有间歇性" index="C"/>
+    <alternative correct="True" describe="发电效率高" index="D"/>
+  </issue>
+  <issue describe="垃圾发电的关键技术不包括下边哪一项（    ）。" explain="" img="" index="50">
+    <alternative correct="False" describe="垃圾焚烧炉的设计制造和管理" index="A"/>
+    <alternative correct="False" describe="垃圾质量管理" index="B"/>
+    <alternative correct="False" describe="焚烧炉温度和蒸汽控制" index="C"/>
+    <alternative correct="True" describe="专业技术人员的培养" index="D"/>
+  </issue>
+  <issue describe="沼气电站应建设在哪里比较合适（     ）。" explain="" img="" index="51">
+    <alternative correct="True" describe="山区农村地区" index="A"/>
+    <alternative correct="False" describe="城市地区" index="B"/>
+    <alternative correct="False" describe="沿海地区" index="C"/>
+    <alternative correct="False" describe="郊区" index="D"/>
+  </issue>

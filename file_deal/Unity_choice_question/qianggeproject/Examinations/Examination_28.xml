@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="垃圾发电的关键技术不包括下边哪一项（    ）。" explain="" img="" index="50">
+    <alternative correct="False" describe="垃圾焚烧炉的设计制造和管理" index="A"/>
+    <alternative correct="False" describe="垃圾质量管理" index="B"/>
+    <alternative correct="False" describe="焚烧炉温度和蒸汽控制" index="C"/>
+    <alternative correct="True" describe="专业技术人员的培养" index="D"/>
+  </issue>
+</root>

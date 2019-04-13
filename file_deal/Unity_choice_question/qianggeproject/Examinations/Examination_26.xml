@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下列选项组中不全部属于新能源的是（  ）  。" explain="" img="" index="48">
+    <alternative correct="False" describe="蓄力、潮汐能" index="A"/>
+    <alternative correct="False" describe="生物质、油页岩" index="B"/>
+    <alternative correct="False" describe="焦油沙、太阳能" index="C"/>
+    <alternative correct="True" describe="石油、核能" index="D"/>
+  </issue>
+</root>

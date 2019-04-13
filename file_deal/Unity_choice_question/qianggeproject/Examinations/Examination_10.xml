@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳电池的功率随光照强度升高而（     ）。" explain="" img="" index="23">
+    <alternative correct="True" describe="增大" index="A"/>
+    <alternative correct="False" describe="减小" index="B"/>
+    <alternative correct="False" describe="无关" index="C"/>
+    <alternative correct="False" describe="先增大后减小" index="D"/>
+  </issue>
+</root>

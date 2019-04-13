@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="我国第 I  类太阳能资源区有（    ）。" explain="" img="" index="21">
+    <alternative correct="True" describe="拉萨、青海和甘肃敦煌" index="A"/>
+    <alternative correct="False" describe="西藏、青海和乌鲁木齐" index="B"/>
+    <alternative correct="False" describe="西藏、青海和云南" index="C"/>
+    <alternative correct="False" describe="西藏、青海和哈尔滨" index="D"/>
+  </issue>
+</root>

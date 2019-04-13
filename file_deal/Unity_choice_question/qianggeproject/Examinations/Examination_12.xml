@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳电池与建筑结合后还具有最为重要的特性为（ ）。" explain="" img="" index="26">
+    <alternative correct="False" describe="遮光" index="A"/>
+    <alternative correct="False" describe="保温" index="B"/>
+    <alternative correct="False" describe="装饰" index="C"/>
+    <alternative correct="True" describe="发电" index="D"/>
+  </issue>
+</root>

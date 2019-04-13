@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="国家首个光热发电特许权招标项目为（    ）。" explain="" img="" index="30">
+    <alternative correct="False" describe="敦煌项目" index="A"/>
+    <alternative correct="False" describe="上海市崇明岛项目" index="B"/>
+    <alternative correct="False" describe="青海省位处柴达木盆地" index="C"/>
+    <alternative correct="True" describe="内蒙 古鄂 尔多斯项目" index="D"/>
+  </issue>
+</root>

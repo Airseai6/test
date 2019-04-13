@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="下述能源中，由太阳能转化来的是（     ）。" explain="" img="" index="40">
+    <alternative correct="False" describe="核能" index="A"/>
+    <alternative correct="True" describe="生物质能" index="B"/>
+    <alternative correct="False" describe="地热能" index="C"/>
+    <alternative correct="False" describe="潮汐能" index="D"/>
+  </issue>
+</root>

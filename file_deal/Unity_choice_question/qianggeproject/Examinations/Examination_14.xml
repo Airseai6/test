@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <issue describe="太阳能光热发电中的抛物面槽式发电属于（      ）。" explain="" img="" index="29">
+    <alternative correct="False" describe="高温" index="A"/>
+    <alternative correct="True" describe="中温" index="B"/>
+    <alternative correct="False" describe="低温" index="C"/>
+    <alternative correct="False" describe="恒温" index="D"/>
+  </issue>
+</root>
