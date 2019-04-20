@@ -10,22 +10,10 @@
 # # b = 889
 # # print(id(b))
 
-import re
-
-tel = 'Tony: 1.5sadgs31234578.; Alien: 13512345678.sfg'
-# req = '"keys":([0-9]{11}?),"data"'
-req = r"\d*\."
-result = re.findall(req, tel)
-pool = []
-for item in result:
-    pool.append(tel.split(item)[0].strip())
-    tel = tel.split(item)[-1]
-
-print(result)
-print(pool)
-str_0 = "alksjdf  alsdkf"
-print(str_0.split('132'))
-
+# print(result)
+# print(pool)
+# str_0 = "alksjdf  alsdkf"
+# print(str_0.split('132'))
 
 # # key = r"<html><body><h1>hello world<h1></body></html>"#这段是你要匹配的文本
 # # p1 = r"(?<=<h1>).+?(?=<h1>)"#这是我们写的正则表达式规则，你现在可以不理解啥意思
@@ -66,9 +54,16 @@ print(str_0.split('132'))
 # print('delta_Z:', delta_z)
 # print('next_location:', (r, u"%.3f°"%theta))
 
-
 # import requests
 #
 # response = requests.get('https://www.baidu.com')
 # # print(response.text)
 # print(response.content.decode('utf-8'))
+
+import re
+
+tel = 'Tony: 1.5sadgs31234578.; Alien: 13512345678.sfg'
+# req = '"keys":([0-9]{11}?),"data"'
+req = r"(\d+\.)\D"
+result = re.findall(req, tel)
+print(result)
