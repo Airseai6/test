@@ -60,10 +60,24 @@
 # # print(response.text)
 # print(response.content.decode('utf-8'))
 
-import re
+# import re
+#
+# tel = 'Tony: 1.5sadgs31234578.; Alien: 13512345678.sfg'
+# # req = '"keys":([0-9]{11}?),"data"'
+# req = r"(\d+\.)\D"
+# result = re.findall(req, tel)
+# print(result)
 
-tel = 'Tony: 1.5sadgs31234578.; Alien: 13512345678.sfg'
-# req = '"keys":([0-9]{11}?),"data"'
-req = r"(\d+\.)\D"
-result = re.findall(req, tel)
-print(result)
+
+
+def find_num(test):
+    items = list(set(test))
+    for item in items:
+        if test.count(item) > len(test)/2.0:
+            return item
+    return None
+
+
+if __name__ == '__main__':
+    test = [1, 1, 2, 2, 2]
+    print(find_num(test))
