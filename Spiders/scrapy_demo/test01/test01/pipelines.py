@@ -9,7 +9,7 @@ import json
 
 class Test01Pipeline(object):
     def __init__(self):
-        self.fp = open('duanzi.json', 'w', encoding='utf-8')
+        self.fp = open('duanzi.json', 'wb', encoding='utf-8')
 
     def open_spider(self, spider):
         print('beginning~~~~')
