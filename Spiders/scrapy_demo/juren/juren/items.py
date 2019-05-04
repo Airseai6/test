@@ -12,4 +12,8 @@ class JurenItem(scrapy.Item):
     # define the fields for your item here like:
     title = scrapy.Field()
     url = scrapy.Field()
+    # 图片链接
+    src = scrapy.Field()
+    # alt图片名字
+    # alt = scrapy.Field()
 

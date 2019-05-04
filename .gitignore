@@ -18,5 +18,8 @@ build
 dist
 .idea
 
+# large Files
+Jurensucai.json
+wxjc.json
 
 

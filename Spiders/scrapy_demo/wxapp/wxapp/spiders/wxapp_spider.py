@@ -11,10 +11,18 @@ class WxappSpiderSpider(CrawlSpider):
     start_urls = ['http://www.wxapp-union.com/portal.php?mod=list&catid=2&page=1']
 
     rules = (
-        # Rule(LinkExtractor(allow=r'http://www.wxapp-union.com/portal.php?mod=list&catid=2&page=\d'), callback='parse_item', follow=True),
-        Rule(LinkExtractor(allow=r'.+mod=list&catid=2&page=\d'), follow=True),
+        # Rule(LinkExtractor(allow=r'http://www.wxapp-union.com/portal.php?mod=list&catid=2&page=\d'),
+        # callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'.+mod=list&catid=2&page=\d'), callback="parse_page", follow=True),
         Rule(LinkExtractor(allow=r'.+article-.+\.html'), callback="parse_detail", follow=False)
     )
+
+    def parse_page(self, response):
+        next_page = response.xpath("//a[@class='nxt']/@href").get()
+        if next_page:
+            yield scrapy.Request(next_page, callback=self.parse_page)
+        else:
+            return
 
     def parse_detail(self, response):
         title = response.xpath("//h1[@class='ph']/text()").get()
