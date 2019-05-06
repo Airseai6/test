@@ -44,15 +44,42 @@ import os
 from multiprocessing import Process
 
 
-def run_proc(name):
-	print('Child process %s (%s) running' %(name, os.getpid()))
+# def run_proc(name):
+# 	print('Child process %s (%s) running' %(name, os.getpid()))
+#
+#
+# if __name__ == '__main__':
+# 	print('Parent Process %s' % os.getpid())
+# 	for i in range(3):
+# 		p = Process(target=run_proc, args=(str(i), ))
+# 		print('Process will start')
+# 		p.start()
+# 	p.join()
+# 	print('Process end.')
+
+
+def consumer():
+	r = ''
+	while True:
+		n = yield r
+		if not n:
+			return
+		print('[CONSUMER]Consuming %s...' % n)
+		r = '200 OK'
+
+
+def produce(c):
+	c.send(None)
+	n = 0
+	while n < 5:
+		n += 1
+		print('[PRODUCER]Producing %s...' %n)
+		r = c.send(n)
+		print('[PRODUCER]Consumer return: %s...' %n)
+	c.close()
 
 
 if __name__ == '__main__':
-	print('Parent Process %s' % os.getpid())
-	for i in range(3):
-		p = Process(target=run_proc, args=(str(i), ))
-		print('Process will start')
-		p.start()
-	p.join()
-	print('Process end.')
+	c = consumer()
+	produce(c)
+	print(type(c))

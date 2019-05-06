@@ -14,10 +14,14 @@ class JurenSpider(scrapy.Spider):
 
     def parse(self, response):
         sucais = response.xpath("//div[@class='work-list-box']/div")
+        # print(sucais)
+        # print(type(sucais))
+
         base_url = 'http://www.jurensucai.com/'
         for sucai in sucais:
             return_url = sucai.xpath(".//div[@class='card-img']/a/@href").get()
             title = sucai.xpath(".//div[@class='card-img']/a/@title").get()
+            # print(title)
             src = sucai.xpath(".//div[@class='card-img']/a/img/@src").get()
             item = JurenItem(title=title, url=base_url+return_url, src=base_url+src)
             yield item

@@ -1,22 +1,24 @@
 #! -*- coding:utf-8 -*-
 # Leetcode 刷题记录
+
+
 # class Solution:
 #     def lengthOfLongestSubstring(self, s):
 #         """
+#         3. 无重复字符的最长子串
 #         :type s: str
 #         :rtype: int
 #         """
 #         self.s = s
-#         strpool = []
-#         l = len(self.s)
+#         strpool = ''
 #         n_max, n_tem = 0, 0
-#         for i in range(l):
+#         for i in range(len(self.s)):
 #             if self.s[i] in strpool:
-#                 count = self.s.index(self.s[i]) + 1
-#                 strpool = list(s[count:i+1])
+#                 find = strpool.index(s[i])
+#                 strpool = strpool[find+1:] + s[i]
 #                 n_tem = len(strpool)
 #             else:
-#                 srtpool = strpool.append(self.s[i])
+#                 strpool = strpool + self.s[i]
 #                 print(strpool)
 #                 n_tem +=1
 #                 if n_tem > n_max:
@@ -27,7 +29,7 @@
 #
 # if __name__ == '__main__':
 #     s = Solution()
-#     str1 = "bbtablud"
+#     str1 = "abcabcbb"
 #     m = s.lengthOfLongestSubstring(str1)
 #     print(m)
 
@@ -147,43 +149,45 @@
 #     nums = [-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0]
 #     threeSum(nums)
 
-# def myAtoi(str1):
-#     """
-#     第8题字符串转整数
-#     :type str: str
-#     :rtype: int
-#     """
-#     str2 = str1.split()[0]
-#     li = []
-#     num_s = []
-#     for i in str2:
-#         li.append(i)
-#     for item in li:
-#         if item == ' ':
-#             print(li)
-#         elif item == '+' or item == '-':
-#             num_s.append(item)
-#         else:
-#             try:
-#                 n = int(item)
-#                 num_s.append(str(n))
-#             except:
-#                 break
-#     try:
-#         num = int(''.join(num_s))
-#         if num < -(2**31):
-#             return -(2**31)
-#         elif num > 2**31-1:
-#             return 2**31-1
-#         else:
-#             return num
-#     except:
-#         return 0
-#     # str2 = str1.split()[0] 这一行总出问题
-#
-# if __name__ == '__main__':
-#     s = "  +098 123"
-#     print(myAtoi(s))
+def myAtoi(str1):
+    """
+    第8题字符串转整数
+    :type str: str
+    :rtype: int
+    """
+    str2 = str1.split()[0]
+    print(str2)
+    li = []
+    num_s = []
+    for i in str2:
+        li.append(i)
+    for item in li:
+        if item == ' ':
+            print(li)
+        elif item == '+' or item == '-':
+            num_s.append(item)
+        else:
+            try:
+                n = int(item)
+                num_s.append(str(n))
+            except:
+                break
+    try:
+        num = int(''.join(num_s))
+        if num < -(2**31):
+            return -(2**31)
+        elif num > 2**31-1:
+            return 2**31-1
+        else:
+            return num
+    except:
+        return 0
+    # str2 = str1.split()[0] 这一行总出问题
+
+
+if __name__ == '__main__':
+    s = "-098123"
+    print(myAtoi(s))
 
 
 # def letterCombinations(digits):
@@ -304,30 +308,30 @@
 #     print(findSubstring(s, words))
 #     print(s.count('aa'))
 
-def maxArea(height):
-    """
-    11题，成水最多容器
-    :type height: List[int]
-    :rtype: int
-    """
-    import copy
-    v_pool = []
-    h_t = copy.deepcopy(height)
-    index_t01 = h_t.index(max(h_t))
-    h_t[index_t01] = 0
-    while len(h_t) >= 2:
-        delta = 0
-        index_t02 = h_t.index(max(h_t))
-        if index_t02 > index_t01:
-            h_t[index_t01:index_t02+1] = [0]
-            delta += index_t02-index_t01
-            v_pool.append(min(height[index_t01],height[index_t02])*(index_t02-index_t01))
-        elif index_t02 < index_t01:
-            h_t[index_t02:index_t01+1] = [0]
-            v_pool.append(min(height[index_t01],height[index_t02])*(index_t01-index_t02))
-    print(h_t)
-
-
-if __name__ == '__main__':
-    height = [1,8,6,2,5,4,8,3,7]
-    print(maxArea(height))
+# def maxArea(height):
+#     """
+#     11题，成水最多容器
+#     :type height: List[int]
+#     :rtype: int
+#     """
+#     import copy
+#     v_pool = []
+#     h_t = copy.deepcopy(height)
+#     index_t01 = h_t.index(max(h_t))
+#     h_t[index_t01] = 0
+#     while len(h_t) >= 2:
+#         delta = 0
+#         index_t02 = h_t.index(max(h_t))
+#         if index_t02 > index_t01:
+#             h_t[index_t01:index_t02+1] = [0]
+#             delta += index_t02-index_t01
+#             v_pool.append(min(height[index_t01],height[index_t02])*(index_t02-index_t01))
+#         elif index_t02 < index_t01:
+#             h_t[index_t02:index_t01+1] = [0]
+#             v_pool.append(min(height[index_t01],height[index_t02])*(index_t01-index_t02))
+#     print(h_t)
+#
+#
+# if __name__ == '__main__':
+#     height = [1,8,6,2,5,4,8,3,7]
+#     print(maxArea(height))
