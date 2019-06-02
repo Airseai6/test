@@ -88,11 +88,27 @@
 # if not None:
 #     print('none')
 
-import logging
-logging.basicConfig(level = logging.INFO,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# import logging
+# logging.basicConfig(level = logging.INFO,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# logger = logging.getLogger(__name__)
+#
+# logger.info("Start print log")
+# logger.debug("Do something")
+# logger.warning("Something maybe fail.")
+# logger.info("Finish")
 
-logger.info("Start print log")
-logger.debug("Do something")
-logger.warning("Something maybe fail.")
-logger.info("Finish")
+
+# from keras import layers
+# layer = layers.Dense(32, input_shape=(784,))
+
+# from keras import models
+# from keras import layers
+#
+# model = models.Sequential()
+# model.add(layers.Dense(32, input_shape=(784, )))
+# model.add(layers.Dense(32))
+
+import numpy as np
+
+x = np.array(12)
+print(type(x))

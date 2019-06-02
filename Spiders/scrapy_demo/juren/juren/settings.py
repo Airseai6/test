@@ -40,12 +40,15 @@ TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Accept-Language': 'en',
-  'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
-               'Chrome/55.0.2883.87 Safari/537.36',
-  'Cookie':'ydjn_2132_sid=Z7R9pp; ydjn_2132_saltkey=MKeL11S1; ydjn_2132_lastvisit=1556901078; ydjn_2132_sendmail=1; ydjn_2132_st_p=0%7C1556904714%7Cbcd2fc12c171de293342f8213a3ab142; ydjn_2132_seccode=19.1ef0c87d0cb954dab0; ydjn_2132_con_request_uri=http%3A%2F%2Fwww.jurensucai.com%2Fconnect.php%3Fmod%3Dlogin%26op%3Dcallback%26referer%3Dhttp%253A%252F%252Fwww.jurensucai.com%252Fwz-2145-1-1.html; ydjn_2132_client_created=1556904804; ydjn_2132_client_token=E4BC862B86883742F1C5DEA28937AE23; ydjn_2132_ulastactivity=ee62TJ53xJGiFyxRla9EkpceImWHsWG6ktIzXLSvn%2FKZyd1NUTOA; ydjn_2132_auth=bb1bXfzb4SIqy%2FOx9LoHXT686RJG8Hhvovwbm28rULDEAzYMEs0oVSL6JtZDvoQ2V5EOnj72HlRkXFryw6RNWa4; ydjn_2132_connect_login=1; ydjn_2132_connect_is_bind=1; ydjn_2132_connect_uin=E4BC862B86883742F1C5DEA28937AE23; ydjn_2132_stats_qc_login=3; ydjn_2132_lastact=1556904805%09home.php%09spacecp; ydjn_2132_checkpm=1',
-  'Upgrade-Insecure-Requests':'1'
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Connection': 'keep-alive',
+    'Cookie': 'ydjn_2132_sid=j9smFx; ydjn_2132_saltkey=GfFnK7kN; ydjn_2132_lastvisit=1557558524; ydjn_2132_st_p=0%7C1557562152%7C5804c841d402defc176b7db7e66db4af; ydjn_2132_sendmail=1; ydjn_2132_seccode=79.d19900f4956ca5941f; ydjn_2132_lastact=1557562978%09member.php%09register; ydjn_2132_ulastactivity=8e27cNLWZykrISkJBlXGJfXa7DKa8fNARtx0ziAU87QRSmKsqHES; ydjn_2132_auth=8208ynZAL9PNdh70ss0j0PZGXN4%2BjACRc1AhiKFNYt9acbbJn9sH%2BFfvDjPPHYw%2B8IdtH6iherGPju4W%2FEQ5t0g; ydjn_2132_creditnotice=0D0D2D0D0D0D0D0D0D149; ydjn_2132_creditbase=0D0D0D0D0D0D0D0D0; ydjn_2132_creditrule=%E6%AF%8F%E5%A4%A9%E7%99%BB%E5%BD%95',
+    'Host': 'www.jurensucai.com',
+    'Referer': 'http://www.jurensucai.com/member.php?mod=register',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
 }
 
 # Enable or disable spider middlewares
