@@ -97,13 +97,18 @@
 # logger.warning("Something maybe fail.")
 # logger.info("Finish")
 
-import os
-# os.system(r'C:\Users\QIDONGKAI\Desktop\LittleParts\C\Projects\test_steam\test_steam\Debug\test_steam.exe 30 900')
 
-if __name__ == '__main__':
-    command = r'C:\Users\QIDONGKAI\Desktop\LittleParts\C\Projects\test_steam\test_steam\Debug\test_steam.exe '
-    for i in range(1,30):
-        for j in range(100,150,10):
-            print(i,j)
-            command = command + str(i) + ' ' + str(j)
-            os.system(command)
+# from keras import layers
+# layer = layers.Dense(32, input_shape=(784,))
+
+# from keras import models
+# from keras import layers
+#
+# model = models.Sequential()
+# model.add(layers.Dense(32, input_shape=(784, )))
+# model.add(layers.Dense(32))
+
+import numpy as np
+
+x = np.array(12)
+print(type(x))

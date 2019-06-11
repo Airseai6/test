@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for juren project
+# Scrapy settings for game_asset project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'juren'
+BOT_NAME = 'game_asset'
 
-SPIDER_MODULES = ['juren.spiders']
-NEWSPIDER_MODULE = 'juren.spiders'
+SPIDER_MODULES = ['game_asset.spiders']
+NEWSPIDER_MODULE = 'game_asset.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'juren (+http://www.yourdomain.com)'
+#USER_AGENT = 'game_asset (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -27,52 +27,46 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.01
+DOWNLOAD_DELAY = 0.03
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = True
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-    'Accept-Encoding': 'gzip, deflate',
-    'Accept-Language': 'zh-CN,zh;q=0.9',
-    'Connection': 'keep-alive',
-    'Cookie': 'ydjn_2132_sid=j9smFx; ydjn_2132_saltkey=GfFnK7kN; ydjn_2132_lastvisit=1557558524; ydjn_2132_st_p=0%7C1557562152%7C5804c841d402defc176b7db7e66db4af; ydjn_2132_sendmail=1; ydjn_2132_seccode=79.d19900f4956ca5941f; ydjn_2132_lastact=1557562978%09member.php%09register; ydjn_2132_ulastactivity=8e27cNLWZykrISkJBlXGJfXa7DKa8fNARtx0ziAU87QRSmKsqHES; ydjn_2132_auth=8208ynZAL9PNdh70ss0j0PZGXN4%2BjACRc1AhiKFNYt9acbbJn9sH%2BFfvDjPPHYw%2B8IdtH6iherGPju4W%2FEQ5t0g; ydjn_2132_creditnotice=0D0D2D0D0D0D0D0D0D149; ydjn_2132_creditbase=0D0D0D0D0D0D0D0D0; ydjn_2132_creditrule=%E6%AF%8F%E5%A4%A9%E7%99%BB%E5%BD%95',
-    'Host': 'www.jurensucai.com',
-    'Referer': 'http://www.jurensucai.com/member.php?mod=register',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en',
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
 }
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'juren.middlewares.JurenSpiderMiddleware': 543,
+#    'game_asset.middlewares.GameAssetSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'juren.middlewares.JurenDownloaderMiddleware': 543,
+#    'game_asset.middlewares.GameAssetDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+   'scrapy.extensions.telnet.TelnetConsole': None,
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'juren.pipelines.JurenPipeline': 300,
+   'game_asset.pipelines.GameAssetPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
