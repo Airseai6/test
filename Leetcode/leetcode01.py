@@ -70,62 +70,86 @@
 #     print(myAtoi(s))
 
 
-def maxArea(height):
-    """
-    11题，成水最多容器
-    :type height: List[int]
-    :rtype: int
-    """
-    def fun_l(height, start, end, result=0):
-        if start < end:
-            if result == 0:
-                result = min(height[start], height[end]) * (end - start)
-            i, j = start, end
-            left_temp, right_temp = height[i], height[j]
-            while i < j:
-                while (i < j) and (height[i] <= left_temp):
-                    i += 1
-                temp = min(height[i], height[j]) * (j - i)
-                if temp > result:
-                    result = temp
-                while (i < j) and (height[j] <= right_temp):
-                    j -= 1
-                temp = min(height[i], height[j]) * (j - i)
-                if temp > result:
-                    result = temp
-            fun_l(height, start, i-1, result)
-            fun_l(height, j+1, end, result)
-        return result
-
-    # return fun_l(height, 0, len(height)-1, result=0)
-    # def fun_r(height, start, end, result=0):
-    #     if start < end:
-    #         if result == 0:
-    #             result = min(height[start], height[end]) * (end - start)
-    #         i, j = start, end
-    #         right = height[j]
-    #         while i < j and height[i] <= right:
-    #             j -= 1
-    #         temp = min(height[i], height[j]) * (j - i)
-    #         if temp > result:
-    #             result = temp
-    #         fun_r(height, start, j, result)
-    #     return result
-
-    result = 0
-    for i in range(len(height)-1):
-        tem = fun_l(height, i, len(height)-1)
-        if tem > result:
-            result = tem
-        tem = fun_l(height, 0, len(height)-1-i)
-        if tem > result:
-            result = tem
-    return result
-
-
-if __name__ == '__main__':
-    height = [2,3,4,5,18,17,6]
-    print(maxArea(height))
+# def maxArea2(height):
+#     """
+#     :type height: List[int]
+#     :rtype: int
+#     """
+#     result, left_max = 0, 0
+#     length = len(height)
+#     left_max_index = length
+#     for i in range(left_max_index):
+#         if height[i] > left_max:
+#             left_max = height[i]
+#             right_max = 0
+#             right_max_index = height.index(max(height[i:]))
+#             for j in range(length-1, right_max_index-1, -1):
+#                 if height[j] > right_max:
+#                     right_max = height[j]
+#                     if j != 0:
+#                         left_max_index = height.index(max(height[:j]))
+#                     result = max(min(height[i], height[j]) * (j - i), result)
+#     return result
+#
+#
+# def maxArea(height):
+#     """
+#     11题，成水最多容器
+#     :type height: List[int]
+#     :rtype: int
+#     """
+#     def fun_l(height, start, end, result=0):
+#         if start < end:
+#             if result == 0:
+#                 result = min(height[start], height[end]) * (end - start)
+#             i, j = start, end
+#             left_temp, right_temp = height[i], height[j]
+#             while i < j:
+#                 while (i < j) and (height[i] <= left_temp):
+#                     i += 1
+#                 temp = min(height[i], height[j]) * (j - i)
+#                 if temp > result:
+#                     result = temp
+#                 while (i < j) and (height[j] <= right_temp):
+#                     j -= 1
+#                 temp = min(height[i], height[j]) * (j - i)
+#                 if temp > result:
+#                     result = temp
+#             fun_l(height, start, i-1, result)
+#             fun_l(height, j+1, end, result)
+#         return result
+#
+#     return fun_l(height, 0, len(height)-1, result=0)
+#     # def fun_r(height, start, end, result=0):
+#     #     if start < end:
+#     #         if result == 0:
+#     #             result = min(height[start], height[end]) * (end - start)
+#     #         i, j = start, end
+#     #         right = height[j]
+#     #         while i < j and height[i] <= right:
+#     #             j -= 1
+#     #         temp = min(height[i], height[j]) * (j - i)
+#     #         if temp > result:
+#     #             result = temp
+#     #         fun_r(height, start, j, result)
+#     #     return result
+#
+#     # result = 0
+#     # for i in range(len(height)-1):
+#     #     tem = fun_l(height, i, len(height)-1)
+#     #     if tem > result:
+#     #         result = tem
+#     #     tem = fun_l(height, 0, len(height)-1-i)
+#     #     if tem > result:
+#     #         result = tem
+#     # return result
+#
+#
+# if __name__ == '__main__':
+#     height = [2,1,1]
+#     print(maxArea2(height))
+    # print(height.index(max(height[2:])))
+    # print(maxArea(height))
 
 
 # def romanToInt(s):
@@ -267,28 +291,40 @@ if __name__ == '__main__':
 #         "8": "tuv",
 #         "9": "wxyz"
 #     }
-#     pool = []
-#     di = []
-#     for item_n in digits:
-#         for item_s in d[item_n]:
-#             di.append(item_s)
+#     def div(pool, str1):
+#         result = []
+#         for item in pool:
+#             for s in str1:
+#                 result.append(item+s)
+#         return result
+#
+#     n, pool = 1, []
+#     for item in d[digits[0]]:
+#         pool.append(item)
+#     while n < len(digits):
+#         pool = div(pool, d[digits[n]])
+#         n += 1
+#     return pool
+#
+# if __name__ == '__main__':
+#     print(letterCombinations('233'))
 
 
-# def removeDuplicates(nums):
-#     """
-#     26. 删除排序数组中的重复项
-#     :type nums: List[int]
-#     :rtype: int
-#     """
-#     new = []
-#     for item in nums:
-#         if item not in new:
-#             new.append(item)
-#     length = len(new)
-#     nums[:length] = new
-#     return length
+def removeDuplicates(nums):
+    """
+    26. 删除排序数组中的重复项
+    :type nums: List[int]
+    :rtype: int
+    """
+    new = []
+    for item in nums:
+        if item not in new:
+            new.append(item)
+    length = len(new)
+    nums[:length] = new
+    return length
 
-
+print([2,1,6])
 # def removeElement(nums, val):
 #     """
 #     27移除元素

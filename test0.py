@@ -88,11 +88,22 @@
 # if not None:
 #     print('none')
 
-import logging
-logging.basicConfig(level = logging.INFO,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# import logging
+# logging.basicConfig(level = logging.INFO,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# logger = logging.getLogger(__name__)
+#
+# logger.info("Start print log")
+# logger.debug("Do something")
+# logger.warning("Something maybe fail.")
+# logger.info("Finish")
 
-logger.info("Start print log")
-logger.debug("Do something")
-logger.warning("Something maybe fail.")
-logger.info("Finish")
+import os
+# os.system(r'C:\Users\QIDONGKAI\Desktop\LittleParts\C\Projects\test_steam\test_steam\Debug\test_steam.exe 30 900')
+
+if __name__ == '__main__':
+    command = r'C:\Users\QIDONGKAI\Desktop\LittleParts\C\Projects\test_steam\test_steam\Debug\test_steam.exe '
+    for i in range(1,30):
+        for j in range(100,150,10):
+            print(i,j)
+            command = command + str(i) + ' ' + str(j)
+            os.system(command)
