@@ -33,7 +33,7 @@ def father_label(file_name, content, label):
     return result
 
 
-def son_label(result, label2, str_add, choose=2):
+def son_label(result, label2, label3, str_add, choose=2):
     try:
         num = int(choose) - 1
         content = result[num]
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             label4 = 'ClCompile'
             str_add = r'..\TeachingLab\;'
             # choose = input('请选择一处作为模板: ')
-            template = son_label(result, label2, str_add)
+            template = son_label(result, label2, label3, str_add)
             write_file(file_name, template, content, result, label2, label3, label4)
     print("程序即将退出~~~")
     sleep(3)
