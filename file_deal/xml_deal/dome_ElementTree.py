@@ -1,27 +1,41 @@
 #! python3
 # -*- coding:utf-8 -*-
 
-from xml.etree.ElementTree import *
+import xml.etree.ElementTree as ET
 
 
 class Movies:
-    def __init__(self,name=None,age=None,sex=None,score=None):
-        self.name=name
-        self.age=age
-        self.sex=sex
-        self.score=score
+    def __init__(self):
+        self.CurrentData = ""
+        self.type = ""
+        self.format = ""
+        self.year = ""
+        self.rating = ""
+        self.stars = ""
+        self.description = ""
 
     def __str__(self):
-        return "姓名：{0}，年龄：{1}，性别：{2}，成绩：{3}".format(self.name,self.age,self.sex,self.score)
-people=[]
-root=parse("students.xml")
-student1=root.findall("student")
-for p in student1:
-    student=Student()
-    student.name=p.find("name").text
-    student.age = p.find("age").text
-    student.sex = p.find("sex").text
-    student.score = p.find("score").text
-    people.append(student)
-for p in people:
+        return "CurrentData：{0}，type：{1}，format：{2}，year：{3}，rating：{4}，stars：{5}，" \
+               "description：{6}".format(self.CurrentData,self.type,self.format,self.year,
+                                        self.rating,self.stars,self.description)
+
+
+movies = []
+root = ET.parse("movies.xml")
+print(root)
+# items = root.findall("movie")
+items = root.getroot()
+print(items)
+for p in items:
+    print('title: ', p.attrib)
+    movie = Movies()
+    movie.type = p.find("type").text
+    print(movie.type)
+    movie.format = p.find("format").text
+    # movie.year = p.find("year").text
+    movie.rating = p.find("rating").text
+    movie.stars = p.find("stars").text
+    movie.description = p.find("description").text
+    movies.append(movie)
+for p in items:
     print(p)
