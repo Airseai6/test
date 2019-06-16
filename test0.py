@@ -108,7 +108,7 @@
 # model.add(layers.Dense(32, input_shape=(784, )))
 # model.add(layers.Dense(32))
 
-import numpy as np
-
-x = np.array(12)
-print(type(x))
+# import numpy as np
+#
+# x = np.array(12)
+# print(type(x))
