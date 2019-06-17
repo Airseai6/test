@@ -18,7 +18,7 @@ def read_file(file_name):
 def file_names(str_add):
     pool = []
     for file_name in os.listdir():
-        if file_name.endswith('.vcxproj'):
+        if file_name.endswith('.vcxproj') and '.bak.vcxproj' not in file_name:
             if str_add not in read_file(file_name):
                 pool.append(file_name)
     return pool
@@ -52,7 +52,6 @@ def choose_label():
         flag = True
     except Exception as e:
         print('输入有误！' + str(e))
-
     return flag, num
 
 
@@ -101,7 +100,7 @@ def write_file(file_name, content, new_content):
 
 
 def main():
-    print('请确保脚本与*.vcxproj(VS2015)文件在同一目录下。')
+    print('请确保脚本与即将修改的*.vcxproj(VS2015)文件在同一目录下。')
     # 标签内容是VS2015对应的
     label = 'ItemDefinitionGroup'
     label2 = 'AdditionalIncludeDirectories'
