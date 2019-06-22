@@ -69,7 +69,6 @@
 # print(result)
 
 
-
 # def find_num(test):
 #     items = list(set(test))
 #     for item in items:
@@ -112,3 +111,21 @@
 #
 # x = np.array(12)
 # print(type(x))
+
+# from keras.datasets import mnist
+#
+# (train_image, train_labels), (test_image, test_labels) = mnist.load_data()
+# digit = train_image[4]
+#
+# import matplotlib.pyplot as plt
+#
+# plt.imshow(digit, camp=plt.cm.binary)
+# plt.show()
+
+from keras import models
+from keras import layers
+
+model = models.Sequential()
+model.add(layers.Dense(32, input_shape=(784, )))
+model.add(layers.Dense(32))
+
