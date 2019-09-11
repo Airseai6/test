@@ -29,7 +29,8 @@ def main():
     str_sign = 'Name:'
     for file_name in file_names(str_sign):
         content = read_file(file_name)
-        p1 = r'%s' % str_sign
+        # p1 = r'%s(.*)\n' % str_sign
+        p1 = r'(%s).*(\n)' % str_sign
         pattern1 = re.compile(p1)
         # result = pattern1.findall(content)
         result = re_search(pattern1, content)
