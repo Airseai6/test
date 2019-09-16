@@ -25,16 +25,28 @@ def re_search(formula, content):
     return matcher.group(0)
 
 
+def write_file(file_name, suffix, content):
+    path = os.getcwd() + '\\NewFolder\\'
+    file_name = path + file_name.replace('.', '_'+suffix+'.')
+    folder = os.path.exists(path)
+    if not folder:
+        os.makedirs(path)
+    with open(file_name, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+
 def main():
     str_sign = 'Name:'
     for file_name in file_names(str_sign):
         content = read_file(file_name)
         # p1 = r'%s(.*)\n' % str_sign
-        p1 = r'(%s).*(\n)' % str_sign
+        # p1 = r'(%s).*(\n)' % str_sign
+        p1 = r'(?<=%s).*(\n)' % str_sign  # (?<=exp2)exp1 后顾
         pattern1 = re.compile(p1)
-        # result = pattern1.findall(content)
         result = re_search(pattern1, content)
+        result = ''.join(result.split())
         print(result)
+        write_file(file_name, result, content)
     print("程序即将退出~~~")
 
 
