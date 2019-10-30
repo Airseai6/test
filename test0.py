@@ -200,50 +200,96 @@
 动态折线图演示示例
 '''
 
-import numpy as np
-import matplotlib.pyplot as plt
-import random
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import random
+#
+#
+# def genrandom():
+#     ID = {"1": "Deny", "2": "Jame"}
+#     id = random.choice(list(ID.keys()))
+#     x = random.randint(0, 100)
+#     y = random.randint(0, 100)
+#     return [id, x, y]
+#
+#
+# def draw():
+#     plt.ion()
+#     plt.figure("轨迹")
+#     plt.xlim((0, 100))
+#     plt.ylim((0, 100))
+#     x_1 = []
+#     y_1 = []
+#     x_2 = []
+#     y_2 = []
+#     while True:
+#         # if len(x_1) > 50:
+#         #     plt.clf()
+#         #     x_1.pop(0)
+#         #     y_1.pop(0)
+#         # if len(x_2) > 50:
+#         #     plt.clf()
+#         #     x_2.pop(0)
+#         #     y_2.pop(0)
+#
+#         series = genrandom()
+#         if series[0] == "1":
+#             x_1.append(series[1])
+#             y_1.append(series[2])
+#             plt.plot(x_1, y_1, c='r', ls='-', marker='o', mec='b', mfc='w', label='1')
+#             plt.pause(0.1)
+#         elif series[0] == "2":
+#             x_2.append(series[1])
+#             y_2.append(series[2])
+#             plt.plot(x_2, y_2, c='g', ls='--', marker='x', mec='b', mfc='w', label='2')
+#             plt.pause(0.1)
+#
+#
+# if __name__ == '__main__':
+#     draw()
+
+import MySQLdb
+
+conn = MySQLdb.connect("localhost", "root", "", "test")
+cur = conn.cursor()
 
 
-def genrandom():
-    ID = {"1": "Deny", "2": "Jame"}
-    id = random.choice(list(ID.keys()))
-    x = random.randint(0, 100)
-    y = random.randint(0, 100)
-    return [id, x, y]
+def is_existed_table(table_name):
+    sql = "show tables from test"
+    cur.execute(sql)
+    result = cur.fetchall()
+    if table_name in str(result):
+        return True
+    else:
+        return False
 
 
-def draw():
-    plt.ion()
-    plt.figure("轨迹")
-    plt.xlim((0, 100))
-    plt.ylim((0, 100))
-    x_1 = []
-    y_1 = []
-    x_2 = []
-    y_2 = []
-    while True:
-        # if len(x_1) > 50:
-        #     plt.clf()
-        #     x_1.pop(0)
-        #     y_1.pop(0)
-        # if len(x_2) > 50:
-        #     plt.clf()
-        #     x_2.pop(0)
-        #     y_2.pop(0)
+def creat_tables(table_name):
+    sql = "create table %s (nid int,username varchar(20), password varchar(64))" %(table_name)
+    cur.execute(sql)
+    conn.commit()
+    conn.close()
 
-        series = genrandom()
-        if series[0] == "1":
-            x_1.append(series[1])
-            y_1.append(series[2])
-            plt.plot(x_1, y_1, c='r', ls='-', marker='o', mec='b', mfc='w', label='1')
-            plt.pause(0.1)
-        elif series[0] == "2":
-            x_2.append(series[1])
-            y_2.append(series[2])
-            plt.plot(x_2, y_2, c='g', ls='--', marker='x', mec='b', mfc='w', label='2')
-            plt.pause(0.1)
+
+def insert(username, password):
+    sql = "insert into user (username,password) values ('%s','%s')" %(username,password)
+    cur.execute(sql)
+    conn.commit()
+    conn.close()
+
+
+def is_existed(username, password):
+    sql = "select * from user where username ='%s' and password ='%s'" %(username, password)
+    cur.execute(sql)
+    result = cur.fetchall()
+    if (len(result) == 0):
+        return False
+    else:
+        return True
 
 
 if __name__ == '__main__':
-    draw()
+    tables = 'user'
+    if not is_existed_table(tables):
+        creat_tables(tables)
+    insert('xiaoA', '123')
