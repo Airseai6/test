@@ -250,12 +250,13 @@
 
 import MySQLdb
 
-conn = MySQLdb.connect("localhost", "root", "", "test")
+database = 'test'
+conn = MySQLdb.connect("localhost", "root", "", database)
 cur = conn.cursor()
 
 
 def is_existed_table(table_name):
-    sql = "show tables from test"
+    sql = "show tables from %s" % (database)
     cur.execute(sql)
     result = cur.fetchall()
     if table_name in str(result):
@@ -264,22 +265,29 @@ def is_existed_table(table_name):
         return False
 
 
-def creat_tables(table_name):
-    sql = "create table %s (nid int,username varchar(20), password varchar(64))" %(table_name)
+def drop_tables(table_name):
+    sql = 'drop table %s' % (table_name)
     cur.execute(sql)
     conn.commit()
-    conn.close()
+
+
+def create_tables(table_name):
+    if is_existed_table(table_name):
+        drop_tables(table_name)
+    sql = "create table %s (id int unsigned not null auto_increment primary key, " \
+          "username varchar(20), password varchar(64))" % (table_name)
+    cur.execute(sql)
+    conn.commit()
 
 
 def insert(username, password):
-    sql = "insert into user (username,password) values ('%s','%s')" %(username,password)
+    sql = "insert into user (username, password) values ('%s','%s')" % (username, password)
     cur.execute(sql)
     conn.commit()
-    conn.close()
 
 
 def is_existed(username, password):
-    sql = "select * from user where username ='%s' and password ='%s'" %(username, password)
+    sql = "select * from user where username ='%s' and password ='%s'" % (username, password)
     cur.execute(sql)
     result = cur.fetchall()
     if (len(result) == 0):
@@ -288,8 +296,15 @@ def is_existed(username, password):
         return True
 
 
+def conn_close():
+    conn.close()
+
+
 if __name__ == '__main__':
-    tables = 'user'
-    if not is_existed_table(tables):
-        creat_tables(tables)
-    insert('xiaoA', '123')
+    table1 = 'user'
+    table2 = 'data'
+    create_tables(table1)
+    insert('AA', '123')
+    insert('AB', '123')
+    conn_close()
+
