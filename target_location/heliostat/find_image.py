@@ -15,9 +15,7 @@ def invert_img(imgobj):
 
 
 def deal_img(imgsrc, imgobj, location):
-    # 读入图片
     image = Image.open(imgsrc)
-    # 处理翻转图片
     obj1 = Image.open(imgobj)
     # obj = ac.imread(imgobj)
     # r, g, b, a = obj1.split()

@@ -4,7 +4,7 @@
 import MySQLdb
 
 database = 'test23'
-conn = MySQLdb.connect("localhost", "root", "", database)
+conn = MySQLdb.connect("localhost", "root", "root", database, charset="utf8")
 cur = conn.cursor()
 
 
@@ -36,7 +36,7 @@ def create_tables(table_name, is_user):
               "username varchar(20), password varchar(64))" % (table_name)
     else:
         sql = "create table %s (id int unsigned not null auto_increment primary key, " \
-              "year int, estate varchar(20), area float, price float" % (table_name)
+              "year int, estate varchar(20), area float, price float)" % (table_name)
     cur.execute(sql)
     conn.commit()
 
