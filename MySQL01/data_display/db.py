@@ -4,7 +4,7 @@
 import MySQLdb
 
 database = 'test23'
-conn = MySQLdb.connect("localhost", "root", "root", database, charset="utf8")
+conn = MySQLdb.connect("localhost", "root", "", database, charset="utf8")
 cur = conn.cursor()
 
 
@@ -47,9 +47,16 @@ def insert_user(table_name, username, password):
     conn.commit()
 
 
-def insert_data(table_name, year, estate, area, price):
-    sql = "insert into %s (year, estate, area, price) values ('%s','%s', '%s','%s')"\
-          % (table_name, year, estate, area, price)
+# def insert_data(table_name, year, estate, area, price):
+#     sql = "insert into %s (year, estate, area, price) values ('%s','%s', '%s','%s')"\
+#           % (table_name, year, estate, area, price)
+#     cur.execute(sql)
+#     conn.commit()
+
+
+def insert_data(table_name, str_data):
+    sql = "insert into %s (year, estate, area, price) values %s"\
+          % (table_name, str_data)
     cur.execute(sql)
     conn.commit()
 
