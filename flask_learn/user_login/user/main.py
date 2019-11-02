@@ -8,8 +8,8 @@ app=Flask(__name__)
 from wtforms import Form,TextField,PasswordField,validators
 
 class LoginForm(Form):
-	username = TextField("username",[validators.Required()])
-	password = PasswordField("password",[validators.Required()])
+	username = TextField("username",[validators.DataRequired()])
+	password = PasswordField("password",[validators.DataRequired()])
 
 
 @app.route("/register",methods=['GET','POST'])
