@@ -4,26 +4,25 @@
     <title>登录页面</title>
 </head>
 <body>
-    <div style="display: block; margin: 0 auto; width: 40%;background: bisque ">
-            <form action="{{ url_for("login") }}"  method ="post">
-               <table>
-                   <tbody>
-                        <tr>
-                            <td>用户名：</td>
-                            <td><input type="text" placeholder="请输入您的账号..." name="username"/></td>
-                        </tr>
-                        <tr>
-                            <td>密码：</td>
-                            <td><input type="password"placeholder="请输入您的密码...." name="password"/></td>
-                        </tr>
-                        <tr>
-                                <td><input type="submit" value="登录" /> </td>
-                                <td></td>
-<!--                                <td><a href="{{ url_for("regist") }}" >注册</a></td>-->
-                        </tr>
-                   </tbody>
-               </table>
-            </form>
+    <div style="display: block; margin: 0 auto; width: 40%; background: bisque ">
+        <form action="{{ url_for("login") }}"  method ="post">
+           <table>
+               <tbody>
+                    <tr>
+                        <td>用户名：</td>
+                        <td><input type="text" placeholder="请输入您的账号..." name="username"/></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><input type="password" placeholder="请输入您的密码...." name="password"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="登录" /> </td>
+                        <td><a href="{{ url_for("regist") }}" >去注册</a></td>
+                    </tr>
+               </tbody>
+           </table>
+        </form>
     </div>
 </body>
 </html>

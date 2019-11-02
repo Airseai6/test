@@ -2,13 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>数据查询</title>
+<!--    <META HTTP-EQUIV="Refresh" content="10">-->
 </head>
+
 <body>
-    <div style="display: block; margin: 0 auto; width: 50%; ">
-            <p>body 元素的内容会显示在浏览器中。</p>
-            <p>title 元素的内容会显示在浏览器的标题栏中。</p>
-            <p>居中显示</p>
+    <div align="center" style=" height:100px; width:600px;">
+        <form action="">
+            欢迎使用！
+            <a href="login.html">
+                <input type="button" value="退出登录">
+            </a>
+            <br/>
+            <input type="button" value="数据刷新">
+        </form>
+    </div>
+
+    <div align="center" style=" height:200px; width:600px;">
+        选择年份：
+        <select>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+        </select>
+        <br/>
+        平均：<textarea>平均</textarea>
+        <br/>
+        最高：<textarea>最高</textarea>
+        <br/>
+        最低：<textarea>最低</textarea>
+        <br/>
+    </div>
+
+    <div align="center" style=" height:450px; width:1200px;">
+        选择小区：
+        <select>
+            <option>A区</option>
+            <option>B区</option>
+            <option>C区</option>
+            <option>D区</option>
+            <option>E区</option>
+            <option>F区</option>
+            <option>G区</option>
+            <option>H区</option>
+            <option>I区</option>
+            <option>J区</option>
+            <option>K区</option>
+        </select>
+        <br/>
+        选择户型(面积不同㎡)：
+        <select>
+            <option>80</option>
+            <option>100</option>
+            <option>120</option>
+        </select>
+        <br/>
+        <div style=" height:400px; width:600px;">
+           <div id="container" style="height: 100%"></div>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+           <script type="text/javascript">
+                var dom = document.getElementById("container");
+                var myChart = echarts.init(dom);
+                var app = {};
+                option = null;
+                option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: [820, 932, 901, 934, 1290, 1330, 1320],
+                        type: 'line'
+                    }]
+                };
+                ;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+           </script>
         </div>
+    </div>
+
+    <div style=" height:600px; width:1200px;">
+        选择年份：
+        <select>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+        </select>
+        <br/>
+        选择户型(面积不同㎡)：
+        <select>
+            <option>80</option>
+            <option>100</option>
+            <option>120</option>
+        </select>
+        <br/>
+        <div>
+
+        </div>
+    </div>
 </body>
 </html>

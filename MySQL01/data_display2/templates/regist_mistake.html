@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+    <form action="{{ url_for("regist") }}" method="post">
+    <table align="center" width="300">
+        <caption style="font-size: 20px;">用户注册</caption>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" name="username"/></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" name="password"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="提交"/>
+                    <input type="reset" name="reset" value="重置"/>
+                </td>
+            </tr>
+            <tr>
+                <td>该用户已存在，请更换用户名！</td>
+                <!-- <td><a href="{{ url_for("login") }}" >点此跳转到登录页面</a></td> -->
+            </tr>
+    </table>
+    </form>
+</body>
+</html>
