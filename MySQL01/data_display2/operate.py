@@ -64,6 +64,7 @@ def select2(estate, area):
 
 
 def gen_data():
+    '''数据生成'''
     data = []
     year = [i for i in range(2009, 2020)]
     estate = [chr(i) for i in range(65, 76)]
@@ -80,6 +81,7 @@ def gen_data():
 
 
 def write_data():
+    '''数据写入到数据库'''
     table_name = 'data'
     create_tables(table_name)
 
@@ -93,3 +95,14 @@ def write_data():
 
 def conn_close():
     conn.close()
+
+
+def replace_data(data):
+    '''数据替换，此函数以后用ajax异步加载替代'''
+    html = r'templates/login_success_simple.html'
+    sign = '__sign01__'
+    with open(html, 'r', encoding='utf8') as f:
+        content = f.read()
+    content = content.replace(sign, data)
+    with open(html.replace('_simple', ''), 'w', encoding='utf8') as f:
+        f.write(content)

@@ -248,63 +248,85 @@
 # if __name__ == '__main__':
 #     draw()
 
-import MySQLdb
+# import MySQLdb
+#
+# database = 'test'
+# conn = MySQLdb.connect("localhost", "root", "", database)
+# cur = conn.cursor()
+#
+#
+# def is_existed_table(table_name):
+#     sql = "show tables from %s" % (database)
+#     cur.execute(sql)
+#     result = cur.fetchall()
+#     if table_name in str(result):
+#         return True
+#     else:
+#         return False
+#
+#
+# def drop_tables(table_name):
+#     sql = 'drop table %s' % (table_name)
+#     cur.execute(sql)
+#     conn.commit()
+#
+#
+# def create_tables(table_name):
+#     if is_existed_table(table_name):
+#         drop_tables(table_name)
+#     sql = "create table %s (id int unsigned not null auto_increment primary key, " \
+#           "username varchar(20), password varchar(64))" % (table_name)
+#     cur.execute(sql)
+#     conn.commit()
+#
+#
+# def insert(username, password):
+#     sql = "insert into user (username, password) values ('%s','%s')" % (username, password)
+#     cur.execute(sql)
+#     conn.commit()
+#
+#
+# def is_existed(username, password):
+#     sql = "select * from user where username ='%s' and password ='%s'" % (username, password)
+#     cur.execute(sql)
+#     result = cur.fetchall()
+#     if (len(result) == 0):
+#         return False
+#     else:
+#         return True
+#
+#
+# def conn_close():
+#     conn.close()
+#
+#
+# if __name__ == '__main__':
+#     table1 = 'user'
+#     table2 = 'data'
+#     create_tables(table1)
+#     insert('AA', '123')
+#     insert('AB', '123')
+#     conn_close()
+temp = [3732.0, 3362.0, 4096.0, 4205.0, 5156.0, 5889.0, 5722.0, 7413.0, 8606.0, 8882.0, 10473.0]
 
-database = 'test'
-conn = MySQLdb.connect("localhost", "root", "", database)
-cur = conn.cursor()
+option = {
+        'xAxis': {
+            'type': 'category',
+            'data': ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+        },
+        'yAxis': {
+            'type': 'value'
+        },
+            'series': [{
+             'data': [876, 0, 901.0, 934.0, 1290, 1330, 1320, 934, 1290, 1330, 1320],
+            'type': 'line'
+                    }]
+                }
 
+print(option['series'][0]['data'])
 
-def is_existed_table(table_name):
-    sql = "show tables from %s" % (database)
-    cur.execute(sql)
-    result = cur.fetchall()
-    if table_name in str(result):
-        return True
-    else:
-        return False
+option['series'][0]['data'] = temp
 
+print(option)
 
-def drop_tables(table_name):
-    sql = 'drop table %s' % (table_name)
-    cur.execute(sql)
-    conn.commit()
-
-
-def create_tables(table_name):
-    if is_existed_table(table_name):
-        drop_tables(table_name)
-    sql = "create table %s (id int unsigned not null auto_increment primary key, " \
-          "username varchar(20), password varchar(64))" % (table_name)
-    cur.execute(sql)
-    conn.commit()
-
-
-def insert(username, password):
-    sql = "insert into user (username, password) values ('%s','%s')" % (username, password)
-    cur.execute(sql)
-    conn.commit()
-
-
-def is_existed(username, password):
-    sql = "select * from user where username ='%s' and password ='%s'" % (username, password)
-    cur.execute(sql)
-    result = cur.fetchall()
-    if (len(result) == 0):
-        return False
-    else:
-        return True
-
-
-def conn_close():
-    conn.close()
-
-
-if __name__ == '__main__':
-    table1 = 'user'
-    table2 = 'data'
-    create_tables(table1)
-    insert('AA', '123')
-    insert('AB', '123')
-    conn_close()
 
